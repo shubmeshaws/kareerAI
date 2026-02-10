@@ -1,0 +1,1352 @@
+[
+  {
+    "id": "match_1",
+    "userId": "user_10",
+    "userName": "User 6",
+    "jobId": "job_2",
+    "jobTitle": "Frontend Dev",
+    "company": "GlobalSys",
+    "resumeId": "res_9",
+    "score": 81,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "Node.js",
+      "React",
+      "Docker"
+    ],
+    "recommendedActions": [
+      "Apply now",
+      "Customize cover letter"
+    ],
+    "timestamp": "2026-02-05T14:42:39.101Z",
+    "status": "Success"
+  },
+  {
+    "id": "match_2",
+    "userId": "user_1",
+    "userName": "User 1",
+    "jobId": "job_7",
+    "jobTitle": "Full Stack",
+    "company": "TechCorp",
+    "resumeId": "res_10",
+    "score": 66,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "Docker",
+      "Node.js",
+      "AWS"
+    ],
+    "recommendedActions": [
+      "Add missing skills to resume",
+      "Take a course on AWS"
+    ],
+    "timestamp": "2026-02-08T07:09:13.100Z",
+    "status": "Partial"
+  },
+  {
+    "id": "match_3",
+    "userId": "user_4",
+    "userName": "User 11",
+    "jobId": "job_4",
+    "jobTitle": "Frontend Dev",
+    "company": "StartupInc",
+    "resumeId": "res_9",
+    "score": 72,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "Docker"
+    ],
+    "recommendedActions": [
+      "Apply now",
+      "Customize cover letter"
+    ],
+    "timestamp": "2026-02-06T22:39:07.546Z",
+    "status": "Partial"
+  },
+  {
+    "id": "match_4",
+    "userId": "user_5",
+    "userName": "User 8",
+    "jobId": "job_5",
+    "jobTitle": "Backend Engineer",
+    "company": "StartupInc",
+    "resumeId": "res_7",
+    "score": 80,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "Python",
+      "React"
+    ],
+    "recommendedActions": [
+      "Apply now",
+      "Customize cover letter"
+    ],
+    "timestamp": "2026-02-08T19:39:33.052Z",
+    "status": "Success"
+  },
+  {
+    "id": "match_5",
+    "userId": "user_13",
+    "userName": "User 12",
+    "jobId": "job_5",
+    "jobTitle": "Backend Engineer",
+    "company": "GlobalSys",
+    "resumeId": "res_6",
+    "score": 58,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "AWS",
+      "React",
+      "TypeScript"
+    ],
+    "recommendedActions": [
+      "Add missing skills to resume",
+      "Take a course on AWS"
+    ],
+    "timestamp": "2026-02-09T15:01:46.175Z",
+    "status": "Partial"
+  },
+  {
+    "id": "match_6",
+    "userId": "user_20",
+    "userName": "User 2",
+    "jobId": "job_9",
+    "jobTitle": "Full Stack",
+    "company": "TechCorp",
+    "resumeId": "res_7",
+    "score": 60,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "AWS"
+    ],
+    "recommendedActions": [
+      "Add missing skills to resume",
+      "Take a course on AWS"
+    ],
+    "timestamp": "2026-02-09T01:08:43.506Z",
+    "status": "Partial"
+  },
+  {
+    "id": "match_7",
+    "userId": "user_6",
+    "userName": "User 20",
+    "jobId": "job_5",
+    "jobTitle": "DevOps",
+    "company": "TechCorp",
+    "resumeId": "res_10",
+    "score": 66,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "TypeScript",
+      "React"
+    ],
+    "recommendedActions": [
+      "Add missing skills to resume",
+      "Take a course on AWS"
+    ],
+    "timestamp": "2026-02-05T03:33:53.501Z",
+    "status": "Partial"
+  },
+  {
+    "id": "match_8",
+    "userId": "user_7",
+    "userName": "User 16",
+    "jobId": "job_9",
+    "jobTitle": "Frontend Dev",
+    "company": "TechCorp",
+    "resumeId": "res_4",
+    "score": 89,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "TypeScript"
+    ],
+    "recommendedActions": [
+      "Apply now",
+      "Customize cover letter"
+    ],
+    "timestamp": "2026-02-03T16:29:47.133Z",
+    "status": "Success"
+  },
+  {
+    "id": "match_9",
+    "userId": "user_17",
+    "userName": "User 14",
+    "jobId": "job_4",
+    "jobTitle": "Frontend Dev",
+    "company": "StartupInc",
+    "resumeId": "res_9",
+    "score": 61,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "Python",
+      "AWS",
+      "React"
+    ],
+    "recommendedActions": [
+      "Add missing skills to resume",
+      "Take a course on AWS"
+    ],
+    "timestamp": "2026-02-03T20:58:51.331Z",
+    "status": "Partial"
+  },
+  {
+    "id": "match_10",
+    "userId": "user_18",
+    "userName": "User 6",
+    "jobId": "job_10",
+    "jobTitle": "Frontend Dev",
+    "company": "GlobalSys",
+    "resumeId": "res_5",
+    "score": 88,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "Python",
+      "Docker"
+    ],
+    "recommendedActions": [
+      "Apply now",
+      "Customize cover letter"
+    ],
+    "timestamp": "2026-02-03T23:12:37.800Z",
+    "status": "Success"
+  },
+  {
+    "id": "match_11",
+    "userId": "user_17",
+    "userName": "User 7",
+    "jobId": "job_6",
+    "jobTitle": "Backend Engineer",
+    "company": "StartupInc",
+    "resumeId": "res_4",
+    "score": 57,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "TypeScript",
+      "Python"
+    ],
+    "recommendedActions": [
+      "Add missing skills to resume",
+      "Take a course on AWS"
+    ],
+    "timestamp": "2026-02-04T23:00:02.272Z",
+    "status": "Partial"
+  },
+  {
+    "id": "match_12",
+    "userId": "user_12",
+    "userName": "User 6",
+    "jobId": "job_6",
+    "jobTitle": "Backend Engineer",
+    "company": "StartupInc",
+    "resumeId": "res_3",
+    "score": 74,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "Docker"
+    ],
+    "recommendedActions": [
+      "Apply now",
+      "Customize cover letter"
+    ],
+    "timestamp": "2026-02-08T10:34:20.851Z",
+    "status": "Partial"
+  },
+  {
+    "id": "match_13",
+    "userId": "user_14",
+    "userName": "User 4",
+    "jobId": "job_3",
+    "jobTitle": "Frontend Dev",
+    "company": "TechCorp",
+    "resumeId": "res_4",
+    "score": 68,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "Docker"
+    ],
+    "recommendedActions": [
+      "Add missing skills to resume",
+      "Take a course on AWS"
+    ],
+    "timestamp": "2026-02-04T22:18:19.403Z",
+    "status": "Partial"
+  },
+  {
+    "id": "match_14",
+    "userId": "user_4",
+    "userName": "User 2",
+    "jobId": "job_7",
+    "jobTitle": "Backend Engineer",
+    "company": "TechCorp",
+    "resumeId": "res_10",
+    "score": 73,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "Node.js",
+      "TypeScript",
+      "Python"
+    ],
+    "recommendedActions": [
+      "Apply now",
+      "Customize cover letter"
+    ],
+    "timestamp": "2026-02-07T02:06:22.197Z",
+    "status": "Partial"
+  },
+  {
+    "id": "match_15",
+    "userId": "user_15",
+    "userName": "User 15",
+    "jobId": "job_7",
+    "jobTitle": "DevOps",
+    "company": "GlobalSys",
+    "resumeId": "res_3",
+    "score": 56,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "React"
+    ],
+    "recommendedActions": [
+      "Add missing skills to resume",
+      "Take a course on AWS"
+    ],
+    "timestamp": "2026-02-05T13:03:46.061Z",
+    "status": "Partial"
+  },
+  {
+    "id": "match_16",
+    "userId": "user_15",
+    "userName": "User 5",
+    "jobId": "job_2",
+    "jobTitle": "Frontend Dev",
+    "company": "StartupInc",
+    "resumeId": "res_8",
+    "score": 84,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "Python"
+    ],
+    "recommendedActions": [
+      "Apply now",
+      "Customize cover letter"
+    ],
+    "timestamp": "2026-02-08T01:30:31.439Z",
+    "status": "Success"
+  },
+  {
+    "id": "match_17",
+    "userId": "user_11",
+    "userName": "User 17",
+    "jobId": "job_2",
+    "jobTitle": "DevOps",
+    "company": "TechCorp",
+    "resumeId": "res_8",
+    "score": 72,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "Node.js"
+    ],
+    "recommendedActions": [
+      "Apply now",
+      "Customize cover letter"
+    ],
+    "timestamp": "2026-02-07T16:19:40.486Z",
+    "status": "Partial"
+  },
+  {
+    "id": "match_18",
+    "userId": "user_6",
+    "userName": "User 10",
+    "jobId": "job_10",
+    "jobTitle": "Backend Engineer",
+    "company": "StartupInc",
+    "resumeId": "res_1",
+    "score": 74,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "TypeScript",
+      "Python",
+      "AWS"
+    ],
+    "recommendedActions": [
+      "Apply now",
+      "Customize cover letter"
+    ],
+    "timestamp": "2026-02-06T17:31:14.494Z",
+    "status": "Partial"
+  },
+  {
+    "id": "match_19",
+    "userId": "user_15",
+    "userName": "User 15",
+    "jobId": "job_4",
+    "jobTitle": "DevOps",
+    "company": "GlobalSys",
+    "resumeId": "res_8",
+    "score": 60,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "React",
+      "AWS"
+    ],
+    "recommendedActions": [
+      "Add missing skills to resume",
+      "Take a course on AWS"
+    ],
+    "timestamp": "2026-02-07T19:55:57.827Z",
+    "status": "Partial"
+  },
+  {
+    "id": "match_20",
+    "userId": "user_10",
+    "userName": "User 6",
+    "jobId": "job_10",
+    "jobTitle": "Backend Engineer",
+    "company": "GlobalSys",
+    "resumeId": "res_9",
+    "score": 66,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "React"
+    ],
+    "recommendedActions": [
+      "Add missing skills to resume",
+      "Take a course on AWS"
+    ],
+    "timestamp": "2026-02-10T01:31:04.714Z",
+    "status": "Partial"
+  },
+  {
+    "id": "match_21",
+    "userId": "user_8",
+    "userName": "User 17",
+    "jobId": "job_5",
+    "jobTitle": "Full Stack",
+    "company": "StartupInc",
+    "resumeId": "res_10",
+    "score": 61,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "TypeScript",
+      "React"
+    ],
+    "recommendedActions": [
+      "Add missing skills to resume",
+      "Take a course on AWS"
+    ],
+    "timestamp": "2026-02-08T23:01:26.329Z",
+    "status": "Partial"
+  },
+  {
+    "id": "match_22",
+    "userId": "user_4",
+    "userName": "User 3",
+    "jobId": "job_3",
+    "jobTitle": "Frontend Dev",
+    "company": "StartupInc",
+    "resumeId": "res_8",
+    "score": 64,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "AWS",
+      "Node.js"
+    ],
+    "recommendedActions": [
+      "Add missing skills to resume",
+      "Take a course on AWS"
+    ],
+    "timestamp": "2026-02-10T10:41:28.393Z",
+    "status": "Partial"
+  },
+  {
+    "id": "match_23",
+    "userId": "user_18",
+    "userName": "User 16",
+    "jobId": "job_5",
+    "jobTitle": "Backend Engineer",
+    "company": "StartupInc",
+    "resumeId": "res_4",
+    "score": 62,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "Node.js",
+      "React"
+    ],
+    "recommendedActions": [
+      "Add missing skills to resume",
+      "Take a course on AWS"
+    ],
+    "timestamp": "2026-02-04T04:14:28.357Z",
+    "status": "Partial"
+  },
+  {
+    "id": "match_24",
+    "userId": "user_2",
+    "userName": "User 20",
+    "jobId": "job_1",
+    "jobTitle": "Backend Engineer",
+    "company": "TechCorp",
+    "resumeId": "res_9",
+    "score": 62,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "TypeScript",
+      "React",
+      "Node.js"
+    ],
+    "recommendedActions": [
+      "Add missing skills to resume",
+      "Take a course on AWS"
+    ],
+    "timestamp": "2026-02-10T12:17:30.997Z",
+    "status": "Partial"
+  },
+  {
+    "id": "match_25",
+    "userId": "user_18",
+    "userName": "User 8",
+    "jobId": "job_6",
+    "jobTitle": "Frontend Dev",
+    "company": "GlobalSys",
+    "resumeId": "res_7",
+    "score": 51,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "TypeScript",
+      "React",
+      "Python"
+    ],
+    "recommendedActions": [
+      "Add missing skills to resume",
+      "Take a course on AWS"
+    ],
+    "timestamp": "2026-02-06T18:51:04.989Z",
+    "status": "Partial"
+  },
+  {
+    "id": "match_26",
+    "userId": "user_13",
+    "userName": "User 9",
+    "jobId": "job_6",
+    "jobTitle": "Frontend Dev",
+    "company": "StartupInc",
+    "resumeId": "res_4",
+    "score": 68,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "Node.js"
+    ],
+    "recommendedActions": [
+      "Add missing skills to resume",
+      "Take a course on AWS"
+    ],
+    "timestamp": "2026-02-08T00:51:48.985Z",
+    "status": "Partial"
+  },
+  {
+    "id": "match_27",
+    "userId": "user_6",
+    "userName": "User 9",
+    "jobId": "job_2",
+    "jobTitle": "Full Stack",
+    "company": "StartupInc",
+    "resumeId": "res_3",
+    "score": 85,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "React",
+      "Node.js"
+    ],
+    "recommendedActions": [
+      "Apply now",
+      "Customize cover letter"
+    ],
+    "timestamp": "2026-02-09T06:11:27.280Z",
+    "status": "Success"
+  },
+  {
+    "id": "match_28",
+    "userId": "user_10",
+    "userName": "User 5",
+    "jobId": "job_8",
+    "jobTitle": "DevOps",
+    "company": "StartupInc",
+    "resumeId": "res_5",
+    "score": 66,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "React",
+      "AWS",
+      "TypeScript"
+    ],
+    "recommendedActions": [
+      "Add missing skills to resume",
+      "Take a course on AWS"
+    ],
+    "timestamp": "2026-02-09T19:52:52.242Z",
+    "status": "Partial"
+  },
+  {
+    "id": "match_29",
+    "userId": "user_15",
+    "userName": "User 19",
+    "jobId": "job_6",
+    "jobTitle": "Backend Engineer",
+    "company": "StartupInc",
+    "resumeId": "res_10",
+    "score": 70,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "AWS"
+    ],
+    "recommendedActions": [
+      "Apply now",
+      "Customize cover letter"
+    ],
+    "timestamp": "2026-02-05T12:19:56.602Z",
+    "status": "Partial"
+  },
+  {
+    "id": "match_30",
+    "userId": "user_13",
+    "userName": "User 13",
+    "jobId": "job_10",
+    "jobTitle": "DevOps",
+    "company": "TechCorp",
+    "resumeId": "res_10",
+    "score": 73,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "Node.js"
+    ],
+    "recommendedActions": [
+      "Apply now",
+      "Customize cover letter"
+    ],
+    "timestamp": "2026-02-04T06:34:54.831Z",
+    "status": "Partial"
+  },
+  {
+    "id": "match_31",
+    "userId": "user_3",
+    "userName": "User 7",
+    "jobId": "job_6",
+    "jobTitle": "Frontend Dev",
+    "company": "GlobalSys",
+    "resumeId": "res_1",
+    "score": 57,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "React",
+      "Python"
+    ],
+    "recommendedActions": [
+      "Add missing skills to resume",
+      "Take a course on AWS"
+    ],
+    "timestamp": "2026-02-08T02:36:54.800Z",
+    "status": "Partial"
+  },
+  {
+    "id": "match_32",
+    "userId": "user_3",
+    "userName": "User 13",
+    "jobId": "job_8",
+    "jobTitle": "DevOps",
+    "company": "GlobalSys",
+    "resumeId": "res_3",
+    "score": 52,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "React",
+      "Docker"
+    ],
+    "recommendedActions": [
+      "Add missing skills to resume",
+      "Take a course on AWS"
+    ],
+    "timestamp": "2026-02-10T09:30:24.926Z",
+    "status": "Partial"
+  },
+  {
+    "id": "match_33",
+    "userId": "user_4",
+    "userName": "User 6",
+    "jobId": "job_4",
+    "jobTitle": "Full Stack",
+    "company": "TechCorp",
+    "resumeId": "res_1",
+    "score": 58,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "React"
+    ],
+    "recommendedActions": [
+      "Add missing skills to resume",
+      "Take a course on AWS"
+    ],
+    "timestamp": "2026-02-05T01:45:14.221Z",
+    "status": "Partial"
+  },
+  {
+    "id": "match_34",
+    "userId": "user_8",
+    "userName": "User 9",
+    "jobId": "job_9",
+    "jobTitle": "DevOps",
+    "company": "GlobalSys",
+    "resumeId": "res_8",
+    "score": 75,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "React",
+      "Docker"
+    ],
+    "recommendedActions": [
+      "Apply now",
+      "Customize cover letter"
+    ],
+    "timestamp": "2026-02-05T16:43:06.088Z",
+    "status": "Partial"
+  },
+  {
+    "id": "match_35",
+    "userId": "user_15",
+    "userName": "User 19",
+    "jobId": "job_2",
+    "jobTitle": "Frontend Dev",
+    "company": "GlobalSys",
+    "resumeId": "res_4",
+    "score": 89,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "TypeScript",
+      "React",
+      "Node.js"
+    ],
+    "recommendedActions": [
+      "Apply now",
+      "Customize cover letter"
+    ],
+    "timestamp": "2026-02-03T17:26:57.492Z",
+    "status": "Success"
+  },
+  {
+    "id": "match_36",
+    "userId": "user_11",
+    "userName": "User 11",
+    "jobId": "job_4",
+    "jobTitle": "DevOps",
+    "company": "TechCorp",
+    "resumeId": "res_5",
+    "score": 77,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "React"
+    ],
+    "recommendedActions": [
+      "Apply now",
+      "Customize cover letter"
+    ],
+    "timestamp": "2026-02-05T21:28:48.851Z",
+    "status": "Success"
+  },
+  {
+    "id": "match_37",
+    "userId": "user_15",
+    "userName": "User 11",
+    "jobId": "job_10",
+    "jobTitle": "DevOps",
+    "company": "TechCorp",
+    "resumeId": "res_8",
+    "score": 67,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "AWS"
+    ],
+    "recommendedActions": [
+      "Add missing skills to resume",
+      "Take a course on AWS"
+    ],
+    "timestamp": "2026-02-09T09:22:01.001Z",
+    "status": "Partial"
+  },
+  {
+    "id": "match_38",
+    "userId": "user_7",
+    "userName": "User 20",
+    "jobId": "job_6",
+    "jobTitle": "Backend Engineer",
+    "company": "GlobalSys",
+    "resumeId": "res_10",
+    "score": 53,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "React",
+      "AWS",
+      "Node.js"
+    ],
+    "recommendedActions": [
+      "Add missing skills to resume",
+      "Take a course on AWS"
+    ],
+    "timestamp": "2026-02-04T03:55:01.748Z",
+    "status": "Partial"
+  },
+  {
+    "id": "match_39",
+    "userId": "user_8",
+    "userName": "User 8",
+    "jobId": "job_9",
+    "jobTitle": "Full Stack",
+    "company": "StartupInc",
+    "resumeId": "res_10",
+    "score": 73,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "Node.js",
+      "React",
+      "TypeScript"
+    ],
+    "recommendedActions": [
+      "Apply now",
+      "Customize cover letter"
+    ],
+    "timestamp": "2026-02-06T10:16:07.386Z",
+    "status": "Partial"
+  },
+  {
+    "id": "match_40",
+    "userId": "user_18",
+    "userName": "User 17",
+    "jobId": "job_8",
+    "jobTitle": "Frontend Dev",
+    "company": "GlobalSys",
+    "resumeId": "res_8",
+    "score": 63,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "React",
+      "Docker"
+    ],
+    "recommendedActions": [
+      "Add missing skills to resume",
+      "Take a course on AWS"
+    ],
+    "timestamp": "2026-02-09T08:28:45.896Z",
+    "status": "Partial"
+  },
+  {
+    "id": "match_41",
+    "userId": "user_11",
+    "userName": "User 12",
+    "jobId": "job_7",
+    "jobTitle": "Frontend Dev",
+    "company": "TechCorp",
+    "resumeId": "res_2",
+    "score": 68,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "Node.js",
+      "AWS"
+    ],
+    "recommendedActions": [
+      "Add missing skills to resume",
+      "Take a course on AWS"
+    ],
+    "timestamp": "2026-02-09T21:38:55.737Z",
+    "status": "Partial"
+  },
+  {
+    "id": "match_42",
+    "userId": "user_11",
+    "userName": "User 11",
+    "jobId": "job_5",
+    "jobTitle": "Full Stack",
+    "company": "StartupInc",
+    "resumeId": "res_2",
+    "score": 64,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "Node.js",
+      "TypeScript",
+      "React"
+    ],
+    "recommendedActions": [
+      "Add missing skills to resume",
+      "Take a course on AWS"
+    ],
+    "timestamp": "2026-02-07T06:04:24.673Z",
+    "status": "Partial"
+  },
+  {
+    "id": "match_43",
+    "userId": "user_17",
+    "userName": "User 12",
+    "jobId": "job_7",
+    "jobTitle": "Backend Engineer",
+    "company": "TechCorp",
+    "resumeId": "res_2",
+    "score": 64,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "Node.js",
+      "AWS",
+      "TypeScript"
+    ],
+    "recommendedActions": [
+      "Add missing skills to resume",
+      "Take a course on AWS"
+    ],
+    "timestamp": "2026-02-04T00:47:07.178Z",
+    "status": "Partial"
+  },
+  {
+    "id": "match_44",
+    "userId": "user_8",
+    "userName": "User 16",
+    "jobId": "job_6",
+    "jobTitle": "DevOps",
+    "company": "GlobalSys",
+    "resumeId": "res_2",
+    "score": 60,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "Docker"
+    ],
+    "recommendedActions": [
+      "Add missing skills to resume",
+      "Take a course on AWS"
+    ],
+    "timestamp": "2026-02-07T17:23:22.091Z",
+    "status": "Partial"
+  },
+  {
+    "id": "match_45",
+    "userId": "user_19",
+    "userName": "User 18",
+    "jobId": "job_8",
+    "jobTitle": "Frontend Dev",
+    "company": "TechCorp",
+    "resumeId": "res_6",
+    "score": 63,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "React"
+    ],
+    "recommendedActions": [
+      "Add missing skills to resume",
+      "Take a course on AWS"
+    ],
+    "timestamp": "2026-02-04T07:16:13.101Z",
+    "status": "Partial"
+  },
+  {
+    "id": "match_46",
+    "userId": "user_18",
+    "userName": "User 8",
+    "jobId": "job_5",
+    "jobTitle": "Full Stack",
+    "company": "TechCorp",
+    "resumeId": "res_5",
+    "score": 63,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "React",
+      "Python",
+      "AWS"
+    ],
+    "recommendedActions": [
+      "Add missing skills to resume",
+      "Take a course on AWS"
+    ],
+    "timestamp": "2026-02-07T20:34:49.755Z",
+    "status": "Partial"
+  },
+  {
+    "id": "match_47",
+    "userId": "user_7",
+    "userName": "User 2",
+    "jobId": "job_10",
+    "jobTitle": "Full Stack",
+    "company": "TechCorp",
+    "resumeId": "res_1",
+    "score": 64,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "TypeScript",
+      "React",
+      "Docker"
+    ],
+    "recommendedActions": [
+      "Add missing skills to resume",
+      "Take a course on AWS"
+    ],
+    "timestamp": "2026-02-09T01:29:19.153Z",
+    "status": "Partial"
+  },
+  {
+    "id": "match_48",
+    "userId": "user_14",
+    "userName": "User 9",
+    "jobId": "job_5",
+    "jobTitle": "Frontend Dev",
+    "company": "TechCorp",
+    "resumeId": "res_1",
+    "score": 63,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "AWS",
+      "Node.js",
+      "Docker"
+    ],
+    "recommendedActions": [
+      "Add missing skills to resume",
+      "Take a course on AWS"
+    ],
+    "timestamp": "2026-02-05T21:34:53.684Z",
+    "status": "Partial"
+  },
+  {
+    "id": "match_49",
+    "userId": "user_1",
+    "userName": "User 5",
+    "jobId": "job_6",
+    "jobTitle": "Full Stack",
+    "company": "TechCorp",
+    "resumeId": "res_3",
+    "score": 84,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "React",
+      "AWS",
+      "TypeScript"
+    ],
+    "recommendedActions": [
+      "Apply now",
+      "Customize cover letter"
+    ],
+    "timestamp": "2026-02-07T20:50:17.723Z",
+    "status": "Success"
+  },
+  {
+    "id": "match_50",
+    "userId": "user_12",
+    "userName": "User 8",
+    "jobId": "job_3",
+    "jobTitle": "DevOps",
+    "company": "StartupInc",
+    "resumeId": "res_2",
+    "score": 52,
+    "matchedKeywords": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Git",
+      "Agile"
+    ],
+    "missingKeywords": [
+      "AWS"
+    ],
+    "recommendedActions": [
+      "Add missing skills to resume",
+      "Take a course on AWS"
+    ],
+    "timestamp": "2026-02-09T05:01:25.110Z",
+    "status": "Partial"
+  }
+]

@@ -1,0 +1,462 @@
+[
+  {
+    "id": "user_1",
+    "name": "User 1",
+    "email": "user1@example.com",
+    "role": "ADMIN",
+    "plan": "FREE",
+    "status": "ACTIVE",
+    "joinedAt": "2025-10-29T04:39:23.717Z",
+    "lastActiveAt": "2026-02-10T02:24:28.841Z",
+    "usage": {
+      "resumesGenerated": 0,
+      "jobsSaved": 31,
+      "aiTokensUsed": 14708
+    },
+    "activityLog": [
+      {
+        "id": "act_0.6869278792583541",
+        "type": "LOGIN",
+        "details": "Logged in from Chrome on MacOS",
+        "timestamp": "2026-02-10T13:35:32.103Z"
+      }
+    ]
+  },
+  {
+    "id": "user_2",
+    "name": "User 2",
+    "email": "user2@example.com",
+    "role": "USER",
+    "plan": "FREE",
+    "status": "ACTIVE",
+    "joinedAt": "2025-12-31T20:48:50.339Z",
+    "lastActiveAt": "2026-02-09T18:03:59.100Z",
+    "usage": {
+      "resumesGenerated": 32,
+      "jobsSaved": 84,
+      "aiTokensUsed": 22817
+    },
+    "activityLog": [
+      {
+        "id": "act_0.8881793390862441",
+        "type": "LOGIN",
+        "details": "Logged in from Chrome on MacOS",
+        "timestamp": "2026-02-10T13:35:32.103Z"
+      }
+    ]
+  },
+  {
+    "id": "user_3",
+    "name": "User 3",
+    "email": "user3@example.com",
+    "role": "USER",
+    "plan": "FREE",
+    "status": "ACTIVE",
+    "joinedAt": "2026-01-22T23:43:58.032Z",
+    "lastActiveAt": "2026-02-10T02:24:14.377Z",
+    "usage": {
+      "resumesGenerated": 9,
+      "jobsSaved": 59,
+      "aiTokensUsed": 229
+    },
+    "activityLog": [
+      {
+        "id": "act_0.585492135564832",
+        "type": "LOGIN",
+        "details": "Logged in from Chrome on MacOS",
+        "timestamp": "2026-02-10T13:35:32.103Z"
+      }
+    ]
+  },
+  {
+    "id": "user_4",
+    "name": "User 4",
+    "email": "user4@example.com",
+    "role": "USER",
+    "plan": "FREE",
+    "status": "ACTIVE",
+    "joinedAt": "2025-11-06T09:10:37.173Z",
+    "lastActiveAt": "2026-02-09T23:30:45.837Z",
+    "usage": {
+      "resumesGenerated": 28,
+      "jobsSaved": 63,
+      "aiTokensUsed": 45583
+    },
+    "activityLog": [
+      {
+        "id": "act_0.5262797720154925",
+        "type": "LOGIN",
+        "details": "Logged in from Chrome on MacOS",
+        "timestamp": "2026-02-10T13:35:32.103Z"
+      }
+    ]
+  },
+  {
+    "id": "user_5",
+    "name": "User 5",
+    "email": "user5@example.com",
+    "role": "USER",
+    "plan": "PRO",
+    "status": "ACTIVE",
+    "joinedAt": "2025-12-06T02:14:14.991Z",
+    "lastActiveAt": "2026-02-09T11:11:47.145Z",
+    "usage": {
+      "resumesGenerated": 49,
+      "jobsSaved": 3,
+      "aiTokensUsed": 2773
+    },
+    "activityLog": [
+      {
+        "id": "act_0.7999207723176984",
+        "type": "LOGIN",
+        "details": "Logged in from Chrome on MacOS",
+        "timestamp": "2026-02-10T13:35:32.103Z"
+      }
+    ]
+  },
+  {
+    "id": "user_6",
+    "name": "User 6",
+    "email": "user6@example.com",
+    "role": "USER",
+    "plan": "FREE",
+    "status": "ACTIVE",
+    "joinedAt": "2025-12-26T11:53:07.959Z",
+    "lastActiveAt": "2026-02-09T12:52:55.644Z",
+    "usage": {
+      "resumesGenerated": 42,
+      "jobsSaved": 59,
+      "aiTokensUsed": 22563
+    },
+    "activityLog": [
+      {
+        "id": "act_0.9081212340923864",
+        "type": "LOGIN",
+        "details": "Logged in from Chrome on MacOS",
+        "timestamp": "2026-02-10T13:35:32.103Z"
+      }
+    ]
+  },
+  {
+    "id": "user_7",
+    "name": "User 7",
+    "email": "user7@example.com",
+    "role": "USER",
+    "plan": "FREE",
+    "status": "ACTIVE",
+    "joinedAt": "2026-01-19T19:18:45.928Z",
+    "lastActiveAt": "2026-02-10T12:23:56.108Z",
+    "usage": {
+      "resumesGenerated": 47,
+      "jobsSaved": 78,
+      "aiTokensUsed": 14126
+    },
+    "activityLog": [
+      {
+        "id": "act_0.503783703122001",
+        "type": "LOGIN",
+        "details": "Logged in from Chrome on MacOS",
+        "timestamp": "2026-02-10T13:35:32.103Z"
+      }
+    ]
+  },
+  {
+    "id": "user_8",
+    "name": "User 8",
+    "email": "user8@example.com",
+    "role": "USER",
+    "plan": "FREE",
+    "status": "SUSPENDED",
+    "joinedAt": "2025-11-04T07:58:40.858Z",
+    "lastActiveAt": "2026-02-10T00:40:14.739Z",
+    "usage": {
+      "resumesGenerated": 10,
+      "jobsSaved": 59,
+      "aiTokensUsed": 47090
+    },
+    "activityLog": [
+      {
+        "id": "act_0.9561492938589043",
+        "type": "LOGIN",
+        "details": "Logged in from Chrome on MacOS",
+        "timestamp": "2026-02-10T13:35:32.103Z"
+      }
+    ]
+  },
+  {
+    "id": "user_9",
+    "name": "User 9",
+    "email": "user9@example.com",
+    "role": "USER",
+    "plan": "PRO",
+    "status": "ACTIVE",
+    "joinedAt": "2025-10-20T04:32:54.658Z",
+    "lastActiveAt": "2026-02-10T06:51:35.120Z",
+    "usage": {
+      "resumesGenerated": 33,
+      "jobsSaved": 22,
+      "aiTokensUsed": 25949
+    },
+    "activityLog": [
+      {
+        "id": "act_0.767079648024832",
+        "type": "LOGIN",
+        "details": "Logged in from Chrome on MacOS",
+        "timestamp": "2026-02-10T13:35:32.103Z"
+      }
+    ]
+  },
+  {
+    "id": "user_10",
+    "name": "User 10",
+    "email": "user10@example.com",
+    "role": "USER",
+    "plan": "FREE",
+    "status": "ACTIVE",
+    "joinedAt": "2025-11-29T10:34:43.487Z",
+    "lastActiveAt": "2026-02-09T18:03:08.566Z",
+    "usage": {
+      "resumesGenerated": 10,
+      "jobsSaved": 77,
+      "aiTokensUsed": 39388
+    },
+    "activityLog": [
+      {
+        "id": "act_0.9933459697580488",
+        "type": "LOGIN",
+        "details": "Logged in from Chrome on MacOS",
+        "timestamp": "2026-02-10T13:35:32.103Z"
+      }
+    ]
+  },
+  {
+    "id": "user_11",
+    "name": "User 11",
+    "email": "user11@example.com",
+    "role": "USER",
+    "plan": "FREE",
+    "status": "ACTIVE",
+    "joinedAt": "2026-01-19T14:12:40.545Z",
+    "lastActiveAt": "2026-02-09T14:00:19.553Z",
+    "usage": {
+      "resumesGenerated": 5,
+      "jobsSaved": 85,
+      "aiTokensUsed": 47103
+    },
+    "activityLog": [
+      {
+        "id": "act_0.20139862381157192",
+        "type": "LOGIN",
+        "details": "Logged in from Chrome on MacOS",
+        "timestamp": "2026-02-10T13:35:32.103Z"
+      }
+    ]
+  },
+  {
+    "id": "user_12",
+    "name": "User 12",
+    "email": "user12@example.com",
+    "role": "USER",
+    "plan": "FREE",
+    "status": "SUSPENDED",
+    "joinedAt": "2026-01-21T20:03:53.491Z",
+    "lastActiveAt": "2026-02-10T09:46:56.621Z",
+    "usage": {
+      "resumesGenerated": 42,
+      "jobsSaved": 47,
+      "aiTokensUsed": 15472
+    },
+    "activityLog": [
+      {
+        "id": "act_0.018730778353948208",
+        "type": "LOGIN",
+        "details": "Logged in from Chrome on MacOS",
+        "timestamp": "2026-02-10T13:35:32.103Z"
+      }
+    ]
+  },
+  {
+    "id": "user_13",
+    "name": "User 13",
+    "email": "user13@example.com",
+    "role": "USER",
+    "plan": "FREE",
+    "status": "ACTIVE",
+    "joinedAt": "2025-12-20T10:53:59.952Z",
+    "lastActiveAt": "2026-02-09T13:09:48.789Z",
+    "usage": {
+      "resumesGenerated": 29,
+      "jobsSaved": 73,
+      "aiTokensUsed": 25451
+    },
+    "activityLog": [
+      {
+        "id": "act_0.8922904569447047",
+        "type": "LOGIN",
+        "details": "Logged in from Chrome on MacOS",
+        "timestamp": "2026-02-10T13:35:32.103Z"
+      }
+    ]
+  },
+  {
+    "id": "user_14",
+    "name": "User 14",
+    "email": "user14@example.com",
+    "role": "USER",
+    "plan": "FREE",
+    "status": "ACTIVE",
+    "joinedAt": "2026-01-30T20:04:01.149Z",
+    "lastActiveAt": "2026-02-09T13:33:48.515Z",
+    "usage": {
+      "resumesGenerated": 9,
+      "jobsSaved": 22,
+      "aiTokensUsed": 18355
+    },
+    "activityLog": [
+      {
+        "id": "act_0.5617190505111649",
+        "type": "LOGIN",
+        "details": "Logged in from Chrome on MacOS",
+        "timestamp": "2026-02-10T13:35:32.103Z"
+      }
+    ]
+  },
+  {
+    "id": "user_15",
+    "name": "User 15",
+    "email": "user15@example.com",
+    "role": "USER",
+    "plan": "FREE",
+    "status": "ACTIVE",
+    "joinedAt": "2025-11-23T10:38:03.090Z",
+    "lastActiveAt": "2026-02-09T20:41:17.314Z",
+    "usage": {
+      "resumesGenerated": 5,
+      "jobsSaved": 67,
+      "aiTokensUsed": 39660
+    },
+    "activityLog": [
+      {
+        "id": "act_0.5307850691216408",
+        "type": "LOGIN",
+        "details": "Logged in from Chrome on MacOS",
+        "timestamp": "2026-02-10T13:35:32.103Z"
+      }
+    ]
+  },
+  {
+    "id": "user_16",
+    "name": "User 16",
+    "email": "user16@example.com",
+    "role": "USER",
+    "plan": "FREE",
+    "status": "ACTIVE",
+    "joinedAt": "2025-11-30T07:45:16.472Z",
+    "lastActiveAt": "2026-02-10T13:28:56.111Z",
+    "usage": {
+      "resumesGenerated": 8,
+      "jobsSaved": 4,
+      "aiTokensUsed": 33915
+    },
+    "activityLog": [
+      {
+        "id": "act_0.10719439134957265",
+        "type": "LOGIN",
+        "details": "Logged in from Chrome on MacOS",
+        "timestamp": "2026-02-10T13:35:32.103Z"
+      }
+    ]
+  },
+  {
+    "id": "user_17",
+    "name": "User 17",
+    "email": "user17@example.com",
+    "role": "USER",
+    "plan": "FREE",
+    "status": "ACTIVE",
+    "joinedAt": "2026-01-03T15:10:47.035Z",
+    "lastActiveAt": "2026-02-09T12:01:24.863Z",
+    "usage": {
+      "resumesGenerated": 42,
+      "jobsSaved": 62,
+      "aiTokensUsed": 27391
+    },
+    "activityLog": [
+      {
+        "id": "act_0.8977422457588765",
+        "type": "LOGIN",
+        "details": "Logged in from Chrome on MacOS",
+        "timestamp": "2026-02-10T13:35:32.103Z"
+      }
+    ]
+  },
+  {
+    "id": "user_18",
+    "name": "User 18",
+    "email": "user18@example.com",
+    "role": "USER",
+    "plan": "PRO",
+    "status": "ACTIVE",
+    "joinedAt": "2026-02-05T06:36:41.786Z",
+    "lastActiveAt": "2026-02-09T15:15:56.448Z",
+    "usage": {
+      "resumesGenerated": 12,
+      "jobsSaved": 21,
+      "aiTokensUsed": 37599
+    },
+    "activityLog": [
+      {
+        "id": "act_0.4446368844613928",
+        "type": "LOGIN",
+        "details": "Logged in from Chrome on MacOS",
+        "timestamp": "2026-02-10T13:35:32.103Z"
+      }
+    ]
+  },
+  {
+    "id": "user_19",
+    "name": "User 19",
+    "email": "user19@example.com",
+    "role": "USER",
+    "plan": "FREE",
+    "status": "SUSPENDED",
+    "joinedAt": "2025-10-21T05:21:16.033Z",
+    "lastActiveAt": "2026-02-09T19:28:16.896Z",
+    "usage": {
+      "resumesGenerated": 34,
+      "jobsSaved": 65,
+      "aiTokensUsed": 36246
+    },
+    "activityLog": [
+      {
+        "id": "act_0.12100589307646603",
+        "type": "LOGIN",
+        "details": "Logged in from Chrome on MacOS",
+        "timestamp": "2026-02-10T13:35:32.103Z"
+      }
+    ]
+  },
+  {
+    "id": "user_20",
+    "name": "User 20",
+    "email": "user20@example.com",
+    "role": "USER",
+    "plan": "FREE",
+    "status": "ACTIVE",
+    "joinedAt": "2026-01-19T23:59:26.330Z",
+    "lastActiveAt": "2026-02-10T06:22:24.551Z",
+    "usage": {
+      "resumesGenerated": 6,
+      "jobsSaved": 85,
+      "aiTokensUsed": 5696
+    },
+    "activityLog": [
+      {
+        "id": "act_0.8752703324179152",
+        "type": "LOGIN",
+        "details": "Logged in from Chrome on MacOS",
+        "timestamp": "2026-02-10T13:35:32.103Z"
+      }
+    ]
+  }
+]

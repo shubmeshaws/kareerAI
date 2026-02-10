@@ -1,0 +1,596 @@
+[
+  {
+    "id": "act_1",
+    "userId": "user_2",
+    "userName": "User 2",
+    "action": "job_saved",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-07T00:36:47.078Z",
+    "metadata": {
+      "jobId": "job_6"
+    }
+  },
+  {
+    "id": "act_2",
+    "userId": "user_16",
+    "userName": "User 16",
+    "action": "resume_generated",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-04T02:25:04.523Z",
+    "metadata": {
+      "resumeId": "res_4"
+    }
+  },
+  {
+    "id": "act_3",
+    "userId": "user_13",
+    "userName": "User 13",
+    "action": "application_status_updated",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-09T09:26:39.752Z",
+    "metadata": {}
+  },
+  {
+    "id": "act_4",
+    "userId": "user_13",
+    "userName": "User 13",
+    "action": "resume_generated",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-09T09:49:01.817Z",
+    "metadata": {
+      "resumeId": "res_8"
+    }
+  },
+  {
+    "id": "act_5",
+    "userId": "user_14",
+    "userName": "User 14",
+    "action": "application_status_updated",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-03T15:41:35.495Z",
+    "metadata": {}
+  },
+  {
+    "id": "act_6",
+    "userId": "user_6",
+    "userName": "User 6",
+    "action": "cover_letter_generated",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-08T15:52:29.449Z",
+    "metadata": {}
+  },
+  {
+    "id": "act_7",
+    "userId": "user_20",
+    "userName": "User 20",
+    "action": "resume_generated",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-08T15:18:20.259Z",
+    "metadata": {
+      "resumeId": "res_1"
+    }
+  },
+  {
+    "id": "act_8",
+    "userId": "user_10",
+    "userName": "User 10",
+    "action": "linkedin_message_generated",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-07T23:38:17.455Z",
+    "metadata": {}
+  },
+  {
+    "id": "act_9",
+    "userId": "user_5",
+    "userName": "User 5",
+    "action": "resume_uploaded",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-04T13:56:39.647Z",
+    "metadata": {
+      "resumeId": "res_3"
+    }
+  },
+  {
+    "id": "act_10",
+    "userId": "user_12",
+    "userName": "User 12",
+    "action": "cover_letter_generated",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-09T14:19:53.427Z",
+    "metadata": {}
+  },
+  {
+    "id": "act_11",
+    "userId": "user_4",
+    "userName": "User 4",
+    "action": "application_status_updated",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-05T17:05:42.926Z",
+    "metadata": {}
+  },
+  {
+    "id": "act_12",
+    "userId": "user_11",
+    "userName": "User 11",
+    "action": "resume_uploaded",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-05T00:12:06.727Z",
+    "metadata": {
+      "resumeId": "res_5"
+    }
+  },
+  {
+    "id": "act_13",
+    "userId": "user_17",
+    "userName": "User 17",
+    "action": "application_status_updated",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-03T21:08:32.141Z",
+    "metadata": {}
+  },
+  {
+    "id": "act_14",
+    "userId": "user_16",
+    "userName": "User 16",
+    "action": "resume_uploaded",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-06T05:21:27.394Z",
+    "metadata": {
+      "resumeId": "res_6"
+    }
+  },
+  {
+    "id": "act_15",
+    "userId": "user_3",
+    "userName": "User 3",
+    "action": "resume_generated",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-08T16:33:19.361Z",
+    "metadata": {
+      "resumeId": "res_4"
+    }
+  },
+  {
+    "id": "act_16",
+    "userId": "user_8",
+    "userName": "User 8",
+    "action": "job_saved",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-05T12:35:01.509Z",
+    "metadata": {
+      "jobId": "job_3"
+    }
+  },
+  {
+    "id": "act_17",
+    "userId": "user_8",
+    "userName": "User 8",
+    "action": "cover_letter_generated",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-08T03:08:59.257Z",
+    "metadata": {}
+  },
+  {
+    "id": "act_18",
+    "userId": "user_9",
+    "userName": "User 9",
+    "action": "linkedin_message_generated",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-04T19:20:24.288Z",
+    "metadata": {}
+  },
+  {
+    "id": "act_19",
+    "userId": "user_15",
+    "userName": "User 15",
+    "action": "resume_uploaded",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-07T04:19:50.215Z",
+    "metadata": {
+      "resumeId": "res_7"
+    }
+  },
+  {
+    "id": "act_20",
+    "userId": "user_10",
+    "userName": "User 10",
+    "action": "auto_match_run",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-04T16:22:27.596Z",
+    "metadata": {}
+  },
+  {
+    "id": "act_21",
+    "userId": "user_5",
+    "userName": "User 5",
+    "action": "auto_match_run",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-09T09:03:02.645Z",
+    "metadata": {}
+  },
+  {
+    "id": "act_22",
+    "userId": "user_11",
+    "userName": "User 11",
+    "action": "job_saved",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-05T20:38:45.959Z",
+    "metadata": {
+      "jobId": "job_1"
+    }
+  },
+  {
+    "id": "act_23",
+    "userId": "user_10",
+    "userName": "User 10",
+    "action": "resume_generated",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-07T01:11:09.871Z",
+    "metadata": {
+      "resumeId": "res_6"
+    }
+  },
+  {
+    "id": "act_24",
+    "userId": "user_1",
+    "userName": "User 1",
+    "action": "application_status_updated",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-04T15:08:05.475Z",
+    "metadata": {}
+  },
+  {
+    "id": "act_25",
+    "userId": "user_19",
+    "userName": "User 19",
+    "action": "job_saved",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-05T16:21:10.409Z",
+    "metadata": {
+      "jobId": "job_9"
+    }
+  },
+  {
+    "id": "act_26",
+    "userId": "user_20",
+    "userName": "User 20",
+    "action": "linkedin_message_generated",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-07T17:00:09.699Z",
+    "metadata": {}
+  },
+  {
+    "id": "act_27",
+    "userId": "user_16",
+    "userName": "User 16",
+    "action": "application_status_updated",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-05T07:35:34.082Z",
+    "metadata": {}
+  },
+  {
+    "id": "act_28",
+    "userId": "user_14",
+    "userName": "User 14",
+    "action": "linkedin_message_generated",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-10T12:29:23.505Z",
+    "metadata": {}
+  },
+  {
+    "id": "act_29",
+    "userId": "user_9",
+    "userName": "User 9",
+    "action": "application_status_updated",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-09T21:20:35.844Z",
+    "metadata": {}
+  },
+  {
+    "id": "act_30",
+    "userId": "user_10",
+    "userName": "User 10",
+    "action": "linkedin_message_generated",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-07T14:09:15.062Z",
+    "metadata": {}
+  },
+  {
+    "id": "act_31",
+    "userId": "user_14",
+    "userName": "User 14",
+    "action": "linkedin_message_generated",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-07T23:24:05.863Z",
+    "metadata": {}
+  },
+  {
+    "id": "act_32",
+    "userId": "user_11",
+    "userName": "User 11",
+    "action": "cover_letter_generated",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-05T20:17:32.334Z",
+    "metadata": {}
+  },
+  {
+    "id": "act_33",
+    "userId": "user_4",
+    "userName": "User 4",
+    "action": "cover_letter_generated",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-05T10:47:14.026Z",
+    "metadata": {}
+  },
+  {
+    "id": "act_34",
+    "userId": "user_20",
+    "userName": "User 20",
+    "action": "job_saved",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-04T23:31:16.291Z",
+    "metadata": {
+      "jobId": "job_5"
+    }
+  },
+  {
+    "id": "act_35",
+    "userId": "user_5",
+    "userName": "User 5",
+    "action": "job_saved",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-03T22:54:20.205Z",
+    "metadata": {
+      "jobId": "job_6"
+    }
+  },
+  {
+    "id": "act_36",
+    "userId": "user_7",
+    "userName": "User 7",
+    "action": "job_saved",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-07T08:19:42.143Z",
+    "metadata": {
+      "jobId": "job_0"
+    }
+  },
+  {
+    "id": "act_37",
+    "userId": "user_8",
+    "userName": "User 8",
+    "action": "linkedin_message_generated",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-09T14:45:45.649Z",
+    "metadata": {}
+  },
+  {
+    "id": "act_38",
+    "userId": "user_2",
+    "userName": "User 2",
+    "action": "job_saved",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-09T23:55:39.800Z",
+    "metadata": {
+      "jobId": "job_8"
+    }
+  },
+  {
+    "id": "act_39",
+    "userId": "user_16",
+    "userName": "User 16",
+    "action": "application_status_updated",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-07T06:44:04.293Z",
+    "metadata": {}
+  },
+  {
+    "id": "act_40",
+    "userId": "user_16",
+    "userName": "User 16",
+    "action": "cover_letter_generated",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-04T21:51:21.396Z",
+    "metadata": {}
+  },
+  {
+    "id": "act_41",
+    "userId": "user_16",
+    "userName": "User 16",
+    "action": "job_saved",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-06T12:04:38.738Z",
+    "metadata": {
+      "jobId": "job_9"
+    }
+  },
+  {
+    "id": "act_42",
+    "userId": "user_9",
+    "userName": "User 9",
+    "action": "resume_generated",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-07T05:20:08.042Z",
+    "metadata": {
+      "resumeId": "res_3"
+    }
+  },
+  {
+    "id": "act_43",
+    "userId": "user_20",
+    "userName": "User 20",
+    "action": "job_saved",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-07T13:26:12.872Z",
+    "metadata": {
+      "jobId": "job_3"
+    }
+  },
+  {
+    "id": "act_44",
+    "userId": "user_1",
+    "userName": "User 1",
+    "action": "linkedin_message_generated",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-06T05:44:48.349Z",
+    "metadata": {}
+  },
+  {
+    "id": "act_45",
+    "userId": "user_4",
+    "userName": "User 4",
+    "action": "application_status_updated",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-06T21:20:24.953Z",
+    "metadata": {}
+  },
+  {
+    "id": "act_46",
+    "userId": "user_14",
+    "userName": "User 14",
+    "action": "cover_letter_generated",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-07T19:09:29.427Z",
+    "metadata": {}
+  },
+  {
+    "id": "act_47",
+    "userId": "user_13",
+    "userName": "User 13",
+    "action": "cover_letter_generated",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-03T16:06:12.189Z",
+    "metadata": {}
+  },
+  {
+    "id": "act_48",
+    "userId": "user_20",
+    "userName": "User 20",
+    "action": "resume_uploaded",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-07T12:27:36.237Z",
+    "metadata": {
+      "resumeId": "res_2"
+    }
+  },
+  {
+    "id": "act_49",
+    "userId": "user_5",
+    "userName": "User 5",
+    "action": "auto_match_run",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-07T08:00:19.243Z",
+    "metadata": {}
+  },
+  {
+    "id": "act_50",
+    "userId": "user_5",
+    "userName": "User 5",
+    "action": "resume_generated",
+    "details": {
+      "snippet": "Action details here..."
+    },
+    "timestamp": "2026-02-08T07:34:49.816Z",
+    "metadata": {
+      "resumeId": "res_9"
+    }
+  }
+]

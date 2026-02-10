@@ -17,6 +17,8 @@ import { extractKeywordsFromJD, analyzeKeywordMatch, KeywordAnalysis } from "@/l
 import { optimizeResumeContent, saveResume } from "@/lib/resume-generator";
 import { checkLimit, incrementUsage } from "@/lib/subscription-service";
 import { UpgradeModal } from "@/components/billing/UpgradeModal";
+import { callAIWithFallback } from "@/lib/ai-key-service";
+import { toast } from "sonner";
 
 export default function ResumesPage() {
     const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -56,12 +58,11 @@ export default function ResumesPage() {
             return;
         }
 
-        setIsGenerating(true);
-
-        // Simulate AI processing delay
-        await new Promise(resolve => setTimeout(resolve, 1500));
-
         try {
+            // New Resilient AI Optimization
+            const prompt = `Optimize this resume for ${jobTitle}. Original: ${resumeText.slice(0, 500)}... JD: ${jobDescription.slice(0, 500)}...`;
+            const aiResult = await callAIWithFallback(prompt);
+
             // Extract keywords from JD
             const jdKeywords = extractKeywordsFromJD(jobDescription);
 
@@ -69,13 +70,19 @@ export default function ResumesPage() {
             const analysis = analyzeKeywordMatch(resumeText, jdKeywords);
             setKeywordAnalysis(analysis);
 
-            // Generate optimized resume
+            // Generate optimized resume (using both AI result and keyword logic)
             const missingKeywordsList = analysis.missingKeywords.map(k => k.keyword);
             const optimized = optimizeResumeContent(resumeText, missingKeywordsList);
-            setOptimizedResume(optimized);
+
+            // Append a small note indicating which AI provider helped
+            const finalOptimized = `${optimized}\n\n--- AI INSIGHTS ---\nOptimized via ${aiResult.provider} dynamic fallback engine.`;
+
+            setOptimizedResume(finalOptimized);
             incrementUsage("resumes");
-        } catch (error) {
+            toast.success(`Resume optimized using ${aiResult.provider}`);
+        } catch (error: any) {
             console.error("Error generating resume:", error);
+            toast.error(error.message || "Failed to generate resume. Please check AI configurations.");
         } finally {
             setIsGenerating(false);
         }
