@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "KareerAI: Auto-Apply Assistant",
+  "version": "1.0.0",
+  "description": "Bridge for auto-filling job applications via KareerAI.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["*://*.lever.co/*", "*://*.greenhouse.io/*"],
+      "js": ["content-script.js"]
+    }
+  ],
+  "host_permissions": ["http://localhost:3000/*"]
+}

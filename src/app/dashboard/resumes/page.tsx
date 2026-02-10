@@ -15,6 +15,8 @@ import { SavedResumes } from "@/components/resume/SavedResumes";
 import { parseResume } from "@/lib/resume-parser";
 import { extractKeywordsFromJD, analyzeKeywordMatch, KeywordAnalysis } from "@/lib/keyword-extractor";
 import { optimizeResumeContent, saveResume } from "@/lib/resume-generator";
+import { checkLimit, incrementUsage } from "@/lib/subscription-service";
+import { UpgradeModal } from "@/components/billing/UpgradeModal";
 
 export default function ResumesPage() {
     const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -27,6 +29,7 @@ export default function ResumesPage() {
     const [keywordAnalysis, setKeywordAnalysis] = useState<KeywordAnalysis | null>(null);
     const [savedRefresh, setSavedRefresh] = useState(0);
     const [activeTab, setActiveTab] = useState("create");
+    const [showUpgradeModal, setShowUpgradeModal] = useState(false);
 
     const handleFileSelect = useCallback(async (file: File) => {
         setSelectedFile(file);
@@ -48,6 +51,11 @@ export default function ResumesPage() {
     const handleGenerate = useCallback(async () => {
         if (!resumeText || !jobDescription || !jobTitle) return;
 
+        if (!checkLimit("resumes")) {
+            setShowUpgradeModal(true);
+            return;
+        }
+
         setIsGenerating(true);
 
         // Simulate AI processing delay
@@ -65,6 +73,7 @@ export default function ResumesPage() {
             const missingKeywordsList = analysis.missingKeywords.map(k => k.keyword);
             const optimized = optimizeResumeContent(resumeText, missingKeywordsList);
             setOptimizedResume(optimized);
+            incrementUsage("resumes");
         } catch (error) {
             console.error("Error generating resume:", error);
         } finally {
@@ -213,6 +222,13 @@ export default function ResumesPage() {
                     <SavedResumes onRefresh={savedRefresh} />
                 </TabsContent>
             </Tabs>
+
+            <UpgradeModal
+                isOpen={showUpgradeModal}
+                onClose={() => setShowUpgradeModal(false)}
+                reason="You've reached your weekly limit for resume tailoring on the Free plan."
+                requiredTier="Pro"
+            />
         </div>
     );
 }

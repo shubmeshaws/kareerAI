@@ -7,26 +7,41 @@ import {
     FileText,
     MessageSquare,
     Briefcase,
-    Settings,
-    LogOut,
+    Zap,
+    CreditCard,
+    ArrowRight,
     ChevronLeft,
-    ChevronRight
+    ChevronRight,
+    LogOut
 } from "lucide-react";
+import { PLANS } from "@/lib/subscription-service";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 const navItems = [
     { href: "/dashboard", icon: LayoutDashboard, label: "Dashboard" },
+    { href: "/dashboard/jobs", icon: Briefcase, label: "Job Finder" },
+    { href: "/dashboard/applications", icon: LayoutDashboard, label: "Tracker" },
+    { href: "/dashboard/auto-apply", icon: Zap, label: "Auto Apply" },
     { href: "/dashboard/resumes", icon: FileText, label: "Resumes" },
-    { href: "/dashboard/interviews", icon: MessageSquare, label: "Interviews" },
-    { href: "/dashboard/jobs", icon: Briefcase, label: "Jobs" },
-    { href: "/dashboard/settings", icon: Settings, label: "Settings" },
+    { href: "/dashboard/billing", icon: CreditCard, label: "Plan & Billing" },
 ];
 
 export function Sidebar() {
     const pathname = usePathname();
     const [collapsed, setCollapsed] = useState(false);
+    const [sub, setSub] = useState<any>(null);
+
+    useEffect(() => {
+        const checkSub = () => {
+            const { getSubscription } = require("@/lib/subscription-service");
+            setSub(getSubscription());
+        };
+        checkSub();
+        window.addEventListener('storage', checkSub);
+        return () => window.removeEventListener('storage', checkSub);
+    }, []);
 
     return (
         <aside
@@ -64,8 +79,8 @@ export function Sidebar() {
                             key={item.href}
                             href={item.href}
                             className={`flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all ${isActive
-                                    ? "bg-gradient-to-r from-indigo-50 to-purple-50 text-indigo-700"
-                                    : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
+                                ? "bg-gradient-to-r from-indigo-50 to-purple-50 text-indigo-700"
+                                : "text-gray-600 hover:bg-gray-50 hover:text-gray-900"
                                 }`}
                         >
                             <item.icon className={`w-5 h-5 flex-shrink-0 ${isActive ? "text-indigo-600" : ""}`} />
@@ -76,6 +91,35 @@ export function Sidebar() {
                     );
                 })}
             </nav>
+
+            {/* Usage Meter */}
+            {!collapsed && sub && (
+                <div className="p-4 mx-4 mb-4 bg-gray-50 rounded-2xl border border-gray-100">
+                    <div className="flex justify-between items-center mb-2">
+                        <span className="text-[10px] font-bold text-gray-500 uppercase tracking-widest">
+                            {sub.tier} Plan
+                        </span>
+                        <span className="text-[10px] font-bold text-indigo-600">
+                            {sub.usage.resumesThisWeek}/{PLANS[sub.tier as keyof typeof PLANS].limits.resumesPerWeek === 9999 ? "∞" : PLANS[sub.tier as keyof typeof PLANS].limits.resumesPerWeek}
+                        </span>
+                    </div>
+                    <div className="h-1.5 w-full bg-gray-200 rounded-full overflow-hidden">
+                        <div
+                            className="h-full bg-indigo-600 transition-all duration-500"
+                            style={{
+                                width: `${Math.min(100, (sub.usage.resumesThisWeek / (PLANS[sub.tier as keyof typeof PLANS].limits.resumesPerWeek || 1)) * 100)}%`
+                            }}
+                        />
+                    </div>
+                    {sub.tier !== "Premium" && (
+                        <Link href="/dashboard/billing">
+                            <Button variant="link" className="p-0 h-auto text-[10px] font-bold text-indigo-600 mt-2 hover:no-underline">
+                                {sub.tier === "Free" ? "Upgrade for unlimited" : "Go Premium for Auto-Apply"} <ArrowRight className="w-2 h-2 ml-1" />
+                            </Button>
+                        </Link>
+                    )}
+                </div>
+            )}
 
             <Separator />
 
