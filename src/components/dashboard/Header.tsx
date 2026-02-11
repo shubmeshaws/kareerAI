@@ -25,7 +25,7 @@ export function Header() {
     };
 
     return (
-        <header className="h-16 bg-white/20 dark:bg-black/20 backdrop-blur-md border-b border-gray-200 dark:border-white/5 flex items-center justify-between px-6 sticky top-0 z-40">
+        <header className="h-16 bg-white/70 dark:bg-black/20 backdrop-blur-md border-b border-gray-200 dark:border-white/5 flex items-center justify-between px-6 sticky top-0 z-40">
             {/* Search */}
             <div className="relative w-96 hidden md:block">
                 <Search className="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" />

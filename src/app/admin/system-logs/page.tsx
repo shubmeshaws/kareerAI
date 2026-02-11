@@ -54,8 +54,8 @@ export default function SystemLogsPage() {
         <div className="space-y-8 animate-in fade-in duration-500">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div>
-                    <h1 className="text-3xl font-bold text-white tracking-tight">System Diagnostics</h1>
-                    <p className="text-slate-400">Real-time server logs, health checks, and performance metrics.</p>
+                    <h1 className="text-2xl font-bold text-white tracking-tight">System Diagnostics</h1>
+                    <p className="text-sm text-slate-400">Real-time server logs, health checks, and performance metrics.</p>
                 </div>
                 <div className="flex gap-2">
                     <div className="flex bg-slate-900 p-1 rounded-lg border border-slate-800">
@@ -86,8 +86,8 @@ export default function SystemLogsPage() {
                                 <AlertTriangle className="w-6 h-6 text-rose-500" />
                             </div>
                             <div>
-                                <p className="text-sm font-medium text-slate-400">Total Errors</p>
-                                <h3 className="text-2xl font-bold text-white">{errorCount}</h3>
+                                <p className="text-xs font-medium text-slate-400">Total Errors</p>
+                                <h3 className="text-xl font-bold text-white">{errorCount}</h3>
                             </div>
                         </Card>
                         <Card className="p-4 bg-slate-900 border-slate-800 flex items-center gap-4">
@@ -95,8 +95,8 @@ export default function SystemLogsPage() {
                                 <Activity className="w-6 h-6 text-amber-500" />
                             </div>
                             <div>
-                                <p className="text-sm font-medium text-slate-400">Avg AI Latency</p>
-                                <h3 className="text-2xl font-bold text-white">{Math.round(avgLatency)} ms</h3>
+                                <p className="text-xs font-medium text-slate-400">Avg AI Latency</p>
+                                <h3 className="text-xl font-bold text-white">{Math.round(avgLatency)} ms</h3>
                             </div>
                         </Card>
                         <Card className="p-4 bg-slate-900 border-slate-800 flex items-center gap-4">
@@ -104,8 +104,8 @@ export default function SystemLogsPage() {
                                 <Server className="w-6 h-6 text-indigo-500" />
                             </div>
                             <div>
-                                <p className="text-sm font-medium text-slate-400">Total Requests</p>
-                                <h3 className="text-2xl font-bold text-white">{logs.length}</h3>
+                                <p className="text-xs font-medium text-slate-400">Total Requests</p>
+                                <h3 className="text-xl font-bold text-white">{logs.length}</h3>
                             </div>
                         </Card>
                     </div>
@@ -168,11 +168,11 @@ export default function SystemLogsPage() {
                         <h3 className="font-bold text-white mb-6 flex items-center gap-2">
                             <Server className="w-5 h-5 text-indigo-500" /> Storage Usage
                         </h3>
-                        <div className="flex items-center justify-center py-8">
-                            <div className="relative w-48 h-48 flex items-center justify-center rounded-full border-8 border-slate-800">
+                        <div className="flex items-center justify-center py-6">
+                            <div className="relative w-40 h-40 flex items-center justify-center rounded-full border-8 border-slate-800">
                                 <div className="text-center">
-                                    <span className="text-3xl font-bold text-white">{health?.storage?.usedMB || 0}</span>
-                                    <span className="block text-xs text-slate-500 uppercase tracking-widest">MB Used</span>
+                                    <span className="text-2xl font-bold text-white">{health?.storage?.usedMB || 0}</span>
+                                    <span className="block text-[10px] text-slate-500 uppercase tracking-widest">MB Used</span>
                                 </div>
                             </div>
                         </div>

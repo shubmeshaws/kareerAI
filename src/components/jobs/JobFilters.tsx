@@ -33,7 +33,7 @@ export function JobFilters({ filters, onFilterChange }: JobFiltersProps) {
                         placeholder="Filter by role vector..."
                         value={filters.role}
                         onChange={(e) => onFilterChange({ ...filters, role: e.target.value })}
-                        className="pl-12 h-12 bg-gray-50/50 dark:bg-white/5 border-gray-200 dark:border-white/10 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-600 rounded-xl focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all font-bold"
+                        className="pl-12 h-12 bg-white dark:bg-white/5 border-gray-200 dark:border-white/10 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-600 rounded-xl focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all font-bold"
                     />
                 </div>
             </div>
@@ -77,7 +77,7 @@ export function JobFilters({ filters, onFilterChange }: JobFiltersProps) {
             </div>
 
             <div className="pt-4 border-t border-gray-100 dark:border-white/5">
-                <div className="flex items-center justify-between p-4 bg-gray-50/50 dark:bg-white/2 border border-gray-100 dark:border-white/5 rounded-2xl group hover:border-cyan-500/30 transition-all cursor-pointer"
+                <div className="flex items-center justify-between p-4 bg-white dark:bg-white/2 border border-gray-100 dark:border-white/5 rounded-2xl group hover:border-cyan-500/30 transition-all cursor-pointer"
                     onClick={() => onFilterChange({ ...filters, remoteOnly: !filters.remoteOnly })}
                 >
                     <div className="flex items-center gap-3">

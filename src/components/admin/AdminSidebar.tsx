@@ -12,18 +12,13 @@ import {
     BarChart3,
     Terminal,
     Settings,
-    ChevronLeft,
-    ChevronRight,
-    LogOut,
-    ExternalLink,
-    Target
+    Target,
 } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Separator } from "@/components/ui/separator";
-import { useState } from "react";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { ThemeToggle } from "@/components/dashboard/ThemeToggle";
 
 const adminNavItems = [
-    { href: "/admin", icon: LayoutDashboard, label: "Overview" },
+    { href: "/admin", icon: LayoutDashboard, label: "Dashboard" },
     { href: "/admin/users", icon: Users, label: "Users" },
     { href: "/admin/resumes", icon: FileText, label: "Resumes" },
     { href: "/admin/jobs", icon: Briefcase, label: "Jobs" },
@@ -37,86 +32,49 @@ const adminNavItems = [
 
 export function AdminSidebar() {
     const pathname = usePathname();
-    const [collapsed, setCollapsed] = useState(false);
 
     return (
-        <aside
-            className={`fixed left-0 top-0 h-full bg-slate-900 border-r border-slate-800 flex flex-col transition-all duration-300 z-50 ${collapsed ? "w-20" : "w-64"
-                }`}
-        >
+        <aside className={`fixed left-0 top-0 h-full w-16 lg:w-52 bg-[#F2F2F2] border-r border-gray-200 flex flex-col transition-all duration-300 z-50`}>
             {/* Logo */}
-            <div className="h-16 flex items-center justify-between px-4 border-b border-slate-800">
-                <Link href="/admin" className="flex items-center gap-2">
-                    <div className="w-8 h-8 bg-indigo-500 rounded-lg flex items-center justify-center flex-shrink-0">
-                        <span className="text-white font-bold text-sm">A</span>
-                    </div>
-                    {!collapsed && (
-                        <div className="flex flex-col">
-                            <span className="text-lg font-bold text-white leading-none">Admin</span>
-                            <span className="text-[10px] text-indigo-400 font-bold uppercase tracking-widest">KareerAI</span>
-                        </div>
-                    )}
+            <div className="px-5 mb-10 mt-6 flex justify-center lg:justify-start shrink-0">
+                <Link href="/admin">
+                    <div className="w-8 h-8 bg-black rounded-lg flex items-center justify-center text-white font-black text-xl italic shadow-lg hover:rotate-6 transition-transform">A</div>
                 </Link>
-                <Button
-                    variant="ghost"
-                    size="icon"
-                    onClick={() => setCollapsed(!collapsed)}
-                    className="h-8 w-8 text-slate-400 hover:text-white hover:bg-slate-800"
-                >
-                    {collapsed ? <ChevronRight className="h-4 w-4" /> : <ChevronLeft className="h-4 w-4" />}
-                </Button>
             </div>
 
             {/* Navigation */}
-            <nav className="flex-1 p-4 space-y-1">
-                {adminNavItems.map((item) => {
-                    const isActive = pathname === item.href;
-                    return (
-                        <Link
-                            key={item.href}
-                            href={item.href}
-                            className={`flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all ${isActive
-                                ? "bg-indigo-600 text-white"
-                                : "text-slate-400 hover:bg-slate-800 hover:text-white"
-                                }`}
-                        >
-                            <item.icon className={`w-5 h-5 flex-shrink-0 ${isActive ? "text-white" : ""}`} />
-                            {!collapsed && (
-                                <span className="font-medium text-sm">{item.label}</span>
-                            )}
-                        </Link>
-                    );
-                })}
+            <nav className="flex-1 space-y-2 px-3 overflow-y-auto custom-scrollbar">
+                {adminNavItems.map((item) => (
+                    <Link
+                        key={item.href}
+                        href={item.href}
+                        className={`w-full flex items-center gap-3 px-3 py-2.5 rounded-xl transition-all duration-200 group ${pathname === item.href
+                            ? "bg-white text-black shadow-md shadow-gray-200/50"
+                            : "text-gray-400 hover:bg-white hover:text-black hover:shadow-sm"
+                            }`}
+                    >
+                        <item.icon className="w-4 h-4 transition-transform group-hover:scale-110 shrink-0" strokeWidth={1.5} />
+                        <span className="hidden lg:block font-semibold text-xs truncate">{item.label}</span>
+                    </Link>
+                ))}
             </nav>
 
-            <Separator className="bg-slate-800" />
+            {/* Theme Toggle & User Profile */}
+            <div className="px-3 mb-6 mt-auto pt-4 shrink-0 space-y-4">
+                <div className="flex justify-center lg:justify-start px-2">
+                    <ThemeToggle />
+                </div>
 
-            {/* User Switcher Entry */}
-            <div className="p-4">
-                <Link href="/dashboard">
-                    <Button
-                        variant="ghost"
-                        className={`w-full justify-start gap-3 text-slate-400 hover:text-white hover:bg-slate-800 ${collapsed ? "px-3" : ""
-                            }`}
-                    >
-                        <ExternalLink className="w-5 h-5" />
-                        {!collapsed && <span>User Dashboard</span>}
-                    </Button>
-                </Link>
-            </div>
-
-            {/* Logout */}
-            <div className="p-4">
-                <Link href="/">
-                    <Button
-                        variant="ghost"
-                        className={`w-full justify-start gap-3 text-slate-400 hover:text-rose-400 hover:bg-rose-500/10 ${collapsed ? "px-3" : ""
-                            }`}
-                    >
-                        <LogOut className="w-5 h-5" />
-                        {!collapsed && <span>Exit Admin</span>}
-                    </Button>
-                </Link>
+                <div className={`flex items-center gap-3 p-2.5 bg-white rounded-2xl border border-gray-100 shadow-sm transition-all hover:shadow-md cursor-pointer group`}>
+                    <Avatar className="h-8 w-8 rounded-lg border-2 border-slate-50">
+                        <AvatarImage src="/avatars/admin.png" />
+                        <AvatarFallback className="bg-black text-white text-[10px] font-black">AD</AvatarFallback>
+                    </Avatar>
+                    <div className="hidden lg:block overflow-hidden">
+                        <p className="text-[10px] font-black text-slate-900 leading-none truncate uppercase tracking-tighter">Admin User</p>
+                        <p className="text-[8px] text-slate-400 font-bold mt-1 uppercase tracking-widest">Console</p>
+                    </div>
+                </div>
             </div>
         </aside>
     );

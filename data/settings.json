@@ -1,0 +1,14 @@
+{
+  "registrationsOpen": true,
+  "limits": {
+    "resumesPerWeek": 3,
+    "aiCallsPerDay": 20,
+    "maxUploadSizeMB": 5
+  },
+  "features": {
+    "jobFinder": true,
+    "autoApply": true,
+    "coverLetter": true,
+    "resumeTailor": true
+  }
+}

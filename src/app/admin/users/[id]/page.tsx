@@ -67,11 +67,11 @@ export default function UserDetailPage() {
                     </Button>
                 </Link>
                 <div>
-                    <h1 className="text-3xl font-bold text-white tracking-tight">{user.name}</h1>
-                    <div className="flex items-center gap-3 text-sm text-slate-400 mt-1">
+                    <h1 className="text-2xl font-bold text-white tracking-tight">{user.name}</h1>
+                    <div className="flex items-center gap-3 text-xs text-slate-400 mt-1">
                         <Mail className="w-3 h-3" /> {user.email}
                         <span className="text-slate-600">•</span>
-                        <span className="font-mono text-xs">ID: {user.id}</span>
+                        <span className="font-mono text-[10px]">ID: {user.id}</span>
                     </div>
                 </div>
                 <div className="ml-auto flex gap-3">

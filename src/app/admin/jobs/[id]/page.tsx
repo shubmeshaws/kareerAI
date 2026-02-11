@@ -52,13 +52,13 @@ export default function JobDetailPage() {
                     </Button>
                 </Link>
                 <div>
-                    <h1 className="text-3xl font-bold text-white tracking-tight">{job.role}</h1>
-                    <div className="flex items-center gap-3 text-sm text-slate-400 mt-1">
+                    <h1 className="text-2xl font-bold text-white tracking-tight">{job.role}</h1>
+                    <div className="flex items-center gap-3 text-xs text-slate-400 mt-1">
                         <Building2 className="w-3 h-3" /> {job.company}
                         <span className="text-slate-600">•</span>
                         <Calendar className="w-3 h-3" /> {new Date(job.createdDate).toLocaleString()}
                         <span className="text-slate-600">•</span>
-                        <span className="font-mono text-xs">ID: {job.id}</span>
+                        <span className="font-mono text-[10px]">ID: {job.id}</span>
                     </div>
                 </div>
             </div>

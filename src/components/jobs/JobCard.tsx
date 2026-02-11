@@ -14,7 +14,7 @@ interface JobCardProps {
 export function JobCard({ job, onClick }: JobCardProps) {
     return (
         <Card
-            className="p-6 bg-white/40 dark:bg-white/5 border-gray-200 dark:border-white/10 hover:border-cyan-500/50 hover:bg-gray-50 dark:hover:bg-white/10 transition-all duration-300 group rounded-[2rem] relative overflow-hidden backdrop-blur-sm cursor-pointer shadow-sm dark:shadow-xl flex flex-col h-full"
+            className="p-6 bg-white dark:bg-white/5 border-gray-200 dark:border-white/10 hover:border-cyan-500/50 hover:bg-gray-50 dark:hover:bg-white/10 transition-all duration-300 group rounded-[2rem] relative overflow-hidden backdrop-blur-sm cursor-pointer shadow-sm dark:shadow-xl flex flex-col h-full"
             onClick={() => onClick(job)}
         >
             <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/5 to-indigo-600/5 opacity-0 group-hover:opacity-100 transition-opacity" />

@@ -1,5 +1,5 @@
 import { NextResponse } from "next/server";
-import { storeActivity } from "@/lib/server/activity-storage";
+import { logActivity } from "@/lib/server/activity-storage";
 
 export async function POST(
     request: Request,
@@ -8,10 +8,10 @@ export async function POST(
     const { id } = await params;
 
     // Log the impersonation event
-    await storeActivity({
+    await logActivity({
         userId: "admin_user",
         userName: "Administrator",
-        action: "Impersonated User",
+        action: "user_impersonated",
         type: "SECURITY",
         details: { targetUserId: id },
         timestamp: new Date().toISOString()

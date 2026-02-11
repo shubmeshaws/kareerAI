@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 import { getSettings, updateSettings } from "@/lib/server/settings-storage";
-import { storeActivity } from "@/lib/server/activity-storage";
+import { logActivity } from "@/lib/server/activity-storage";
 
 export async function GET() {
     return NextResponse.json(getSettings());
@@ -14,11 +14,10 @@ export async function POST(request: Request) {
         // Audit Log
         // In a real app, we'd get the admin ID from the session. 
         // For now, we'll use a generic "admin" user or try to get it from headers if we had auth.
-        await storeActivity({
+        await logActivity({
             userId: "admin_user", // Placeholder or from session
             userName: "Administrator",
-            action: "Updated System Settings",
-            type: "SYSTEM",
+            action: "system_settings_updated",
             details: { changes: Object.keys(body) },
             timestamp: new Date().toISOString()
         });

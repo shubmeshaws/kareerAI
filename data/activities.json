@@ -1,5 +1,19 @@
 [
   {
+    "userId": "admin_user",
+    "userName": "Administrator",
+    "action": "system_settings_updated",
+    "details": {
+      "changes": [
+        "registrationsOpen",
+        "limits",
+        "features"
+      ]
+    },
+    "timestamp": "2026-02-11T08:04:27.789Z",
+    "id": "uh4eo"
+  },
+  {
     "id": "act_1",
     "userId": "user_2",
     "userName": "User 2",

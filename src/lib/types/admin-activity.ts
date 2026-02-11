@@ -5,7 +5,9 @@ export type ActivityType =
     | "cover_letter_generated"
     | "linkedin_message_generated"
     | "auto_match_run"
-    | "application_status_updated";
+    | "application_status_updated"
+    | "system_settings_updated"
+    | "user_impersonated";
 
 export interface ActivityLog {
     id: string;
