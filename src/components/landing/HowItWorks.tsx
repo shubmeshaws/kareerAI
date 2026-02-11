@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 const steps = [
     {
         number: "01",
@@ -23,55 +27,55 @@ const steps = [
 
 export function HowItWorks() {
     return (
-        <section id="how-it-works" className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-b from-gray-50 to-white">
+        <section id="how-it-works" className="py-32 px-4 sm:px-6 lg:px-8 relative z-10">
             <div className="max-w-7xl mx-auto">
-                {/* Section Header */}
-                <div className="text-center max-w-3xl mx-auto mb-16">
-                    <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-                        How{" "}
-                        <span className="bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
-                            KareerAI
-                        </span>{" "}
-                        Works
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    className="text-center max-w-3xl mx-auto mb-24"
+                >
+                    <h2 className="text-4xl sm:text-7xl font-black text-white mb-6 tracking-tighter">
+                        The Science of <span className="text-cyan-400">Velocity</span>
                     </h2>
-                    <p className="text-lg text-gray-600">
-                        Four simple steps to accelerate your career journey with the power of AI.
+                    <p className="text-xl text-gray-400 font-medium leading-relaxed">
+                        A systematic approach to career dominance, powered by advanced heuristics.
                     </p>
-                </div>
+                </motion.div>
 
-                {/* Steps */}
                 <div className="relative">
-                    {/* Connection Line */}
-                    <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-indigo-200 via-purple-200 to-indigo-200 -translate-y-1/2" />
+                    <div className="hidden lg:block absolute top-[28px] left-[10%] right-[10%] h-px bg-gradient-to-r from-transparent via-cyan-500/50 to-transparent" />
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
                         {steps.map((step, index) => (
-                            <div key={step.number} className="relative">
-                                <div className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl transition-shadow">
-                                    {/* Step Number */}
-                                    <div className="w-14 h-14 rounded-2xl bg-gradient-to-r from-indigo-600 to-purple-600 flex items-center justify-center mb-4 mx-auto lg:mx-0">
-                                        <span className="text-xl font-bold text-white">{step.number}</span>
+                            <motion.div
+                                key={step.number}
+                                initial={{ opacity: 0, scale: 0.9 }}
+                                whileInView={{ opacity: 1, scale: 1 }}
+                                viewport={{ once: true }}
+                                transition={{ delay: index * 0.15 }}
+                                className="relative group"
+                            >
+                                <div className="text-center lg:text-left">
+                                    <div className="w-14 h-14 rounded-2xl bg-white/5 border border-white/10 flex items-center justify-center mb-8 mx-auto lg:mx-0 group-hover:border-cyan-500/50 group-hover:bg-cyan-500/10 transition-all duration-500 relative z-10">
+                                        <span className="text-2xl font-black text-white group-hover:text-cyan-400 transition-colors">{step.number}</span>
+                                        <div className="absolute inset-0 bg-cyan-500/20 blur-xl opacity-0 group-hover:opacity-100 transition-opacity" />
                                     </div>
 
-                                    <h3 className="text-xl font-semibold text-gray-900 mb-2 text-center lg:text-left">
+                                    <h3 className="text-2xl font-bold text-white mb-4 tracking-tight">
                                         {step.title}
                                     </h3>
-                                    <p className="text-gray-600 text-center lg:text-left">
+                                    <p className="text-gray-400 font-medium leading-relaxed">
                                         {step.description}
                                     </p>
                                 </div>
 
-                                {/* Arrow for mobile */}
                                 {index < steps.length - 1 && (
-                                    <div className="flex justify-center my-4 lg:hidden">
-                                        <div className="w-8 h-8 rounded-full bg-indigo-100 flex items-center justify-center">
-                                            <svg className="w-4 h-4 text-indigo-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
-                                            </svg>
-                                        </div>
+                                    <div className="flex justify-center my-8 lg:hidden">
+                                        <div className="w-px h-12 bg-gradient-to-b from-cyan-500/50 to-transparent" />
                                     </div>
                                 )}
-                            </div>
+                            </motion.div>
                         ))}
                     </div>
                 </div>

@@ -7,8 +7,6 @@ import {
     SheetContent,
     SheetHeader,
     SheetTitle,
-    SheetDescription,
-    SheetFooter
 } from "@/components/ui/sheet";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
@@ -24,7 +22,10 @@ import {
     Zap,
     Mail,
     Linkedin,
-    FileText
+    FileText,
+    Bookmark,
+    BookmarkCheck,
+    Shield
 } from "lucide-react";
 import {
     Accordion,
@@ -32,12 +33,10 @@ import {
     AccordionItem,
     AccordionTrigger
 } from "@/components/ui/accordion";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { OutreachKit, generateOutreachKit } from "@/lib/kit-generator";
 import { addApplication } from "@/lib/application-service";
 import { checkLimit } from "@/lib/subscription-service";
 import { UpgradeModal } from "@/components/billing/UpgradeModal";
-import { Bookmark, BookmarkCheck } from "lucide-react";
 
 interface JobDetailViewProps {
     job: Job | null;
@@ -100,207 +99,163 @@ export function JobDetailView({ job, isOpen, onClose }: JobDetailViewProps) {
 
     return (
         <Sheet open={isOpen} onOpenChange={onClose}>
-            <SheetContent className="sm:max-w-xl w-full overflow-y-auto">
-                <SheetHeader className="text-left space-y-4">
-                    <div className="flex justify-between items-start">
-                        <div className="w-16 h-16 rounded-2xl bg-indigo-50 flex items-center justify-center">
-                            <Building2 className="w-8 h-8 text-indigo-600" />
-                        </div>
-                        <Badge variant="outline" className="text-indigo-600 border-indigo-200">
-                            {job.source}
-                        </Badge>
-                    </div>
-                    <div>
-                        <SheetTitle className="text-2xl font-bold">{job.title}</SheetTitle>
-                        <div className="flex flex-wrap gap-x-4 gap-y-2 mt-2">
-                            <span className="text-gray-600 flex items-center gap-1 font-medium">
-                                {job.companyName}
-                            </span>
-                            <span className="text-gray-400 flex items-center gap-1">
-                                <MapPin className="w-4 h-4" />
-                                {job.location}
-                            </span>
-                            <span className="text-gray-400 flex items-center gap-1">
-                                <Calendar className="w-4 h-4" />
-                                {new Date(job.postedDate).toLocaleDateString()}
-                            </span>
-                        </div>
-                    </div>
+            <SheetContent className="sm:max-w-xl w-full p-0 border-none bg-white dark:bg-[#0E121B] text-gray-900 dark:text-white transition-colors duration-500">
+                <div className="h-full flex flex-col relative">
+                    {/* Background glow */}
+                    <div className="absolute top-0 right-0 w-64 h-64 bg-cyan-500/10 dark:bg-cyan-500/10 blur-[100px] pointer-events-none transition-opacity" />
+                    <div className="absolute bottom-0 left-0 w-64 h-64 bg-indigo-500/10 dark:bg-indigo-500/10 blur-[100px] pointer-events-none transition-opacity" />
 
-                    <div className="flex flex-wrap gap-2">
-                        <Badge className="bg-purple-100 text-purple-700 border-purple-200">
-                            {job.companyType}
-                        </Badge>
-                        <Badge variant="secondary">
-                            {job.type}
-                        </Badge>
-                        {job.remote && (
-                            <Badge className="bg-indigo-100 text-indigo-700 border-indigo-200">
-                                Remote Friendly
-                            </Badge>
-                        )}
-                    </div>
-                </SheetHeader>
-
-                <div className="mt-8 space-y-8">
-                    {/* Smart Apply Kit Section */}
-                    <div className="bg-gradient-to-br from-indigo-600 to-purple-700 rounded-2xl p-6 text-white shadow-lg overflow-hidden relative">
-                        <div className="absolute top-0 right-0 p-4 opacity-10">
-                            <Sparkles className="w-24 h-24" />
+                    {/* Sticky Header */}
+                    <div className="sticky top-0 z-20 p-8 bg-white/80 dark:bg-[#0E121B]/80 backdrop-blur-xl border-b border-gray-100 dark:border-white/5">
+                        <div className="flex justify-between items-start mb-6">
+                            <div className="w-16 h-16 rounded-2xl bg-gray-50 dark:bg-white/5 border border-gray-100 dark:border-white/10 flex items-center justify-center shadow-inner group transition-all">
+                                <Building2 className="w-8 h-8 text-cyan-600 dark:text-cyan-400 group-hover:scale-110 transition-transform" />
+                            </div>
+                            <div className="flex gap-2">
+                                <Badge variant="outline" className="border-gray-200 dark:border-white/10 bg-gray-50 dark:bg-white/5 text-[10px] font-black uppercase tracking-widest px-3 py-1 text-gray-500 dark:text-gray-400">
+                                    NODE: {job.source.toUpperCase()}
+                                </Badge>
+                                <Badge className="bg-cyan-600 dark:bg-cyan-500 text-white border-none text-[10px] font-black uppercase tracking-widest px-3 py-1 rounded-lg shadow-sm">
+                                    VERIFIED
+                                </Badge>
+                            </div>
                         </div>
 
-                        <div className="relative z-10">
-                            <h3 className="text-xl font-bold flex items-center gap-2 mb-2">
-                                <Sparkles className="w-5 h-5" />
-                                Smart Apply Kit
-                            </h3>
-                            <p className="text-indigo-100 text-sm mb-6">
-                                Personalized outreach templates generated for this role.
-                            </p>
-
-                            {isGenerating ? (
-                                <div className="flex flex-col items-center justify-center py-8 space-y-3">
-                                    <div className="w-8 h-8 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                                    <p className="text-sm font-medium">Personalizing templates...</p>
+                        <div>
+                            <h1 className="text-3xl font-black tracking-tight text-gray-900 dark:text-white mb-3 uppercase leading-tight">
+                                {job.title}
+                            </h1>
+                            <div className="flex flex-wrap gap-x-6 gap-y-3">
+                                <div className="flex items-center gap-2 text-sm text-cyan-600 dark:text-cyan-400 font-bold">
+                                    <Shield className="w-4 h-4" />
+                                    {job.companyName}
                                 </div>
-                            ) : kit ? (
-                                <Accordion type="single" collapsible className="w-full space-y-3 border-none">
-                                    <AccordionItem value="cover-letter" className="border-none bg-white/10 rounded-xl px-4 overflow-hidden">
-                                        <AccordionTrigger className="hover:no-underline py-4 text-white hover:text-indigo-100 transition-colors">
-                                            <div className="flex items-center gap-3">
-                                                <FileText className="w-4 h-4" />
-                                                <span className="text-sm font-semibold">Cover Letter</span>
-                                            </div>
-                                        </AccordionTrigger>
-                                        <AccordionContent className="pb-4">
-                                            <div className="bg-white/90 rounded-lg p-3 text-gray-900 text-xs font-mono mb-3 max-h-40 overflow-y-auto leading-relaxed">
-                                                {kit.coverLetter}
-                                            </div>
-                                            <Button
-                                                size="sm"
-                                                variant="secondary"
-                                                className="w-full h-9 gap-2 font-bold"
-                                                onClick={() => copyToClipboard(kit.coverLetter, "cl")}
-                                            >
-                                                {copiedKey === "cl" ? <Check className="w-4 h-4 text-green-600" /> : <Copy className="w-4 h-4" />}
-                                                {copiedKey === "cl" ? "Copied!" : "Copy Cover Letter"}
-                                            </Button>
-                                        </AccordionContent>
-                                    </AccordionItem>
-
-                                    <AccordionItem value="linkedin-dm" className="border-none bg-white/10 rounded-xl px-4 overflow-hidden">
-                                        <AccordionTrigger className="hover:no-underline py-4 text-white hover:text-indigo-100 transition-colors">
-                                            <div className="flex items-center gap-3">
-                                                <Linkedin className="w-4 h-4" />
-                                                <span className="text-sm font-semibold">LinkedIn DM</span>
-                                            </div>
-                                        </AccordionTrigger>
-                                        <AccordionContent className="pb-4">
-                                            <div className="bg-white/90 rounded-lg p-3 text-gray-900 text-xs font-mono mb-3 leading-relaxed">
-                                                {kit.linkedinDM}
-                                            </div>
-                                            <Button
-                                                size="sm"
-                                                variant="secondary"
-                                                className="w-full h-9 gap-2 font-bold"
-                                                onClick={() => copyToClipboard(kit.linkedinDM, "li")}
-                                            >
-                                                {copiedKey === "li" ? <Check className="w-4 h-4 text-green-600" /> : <Copy className="w-4 h-4" />}
-                                                {copiedKey === "li" ? "Copied!" : "Copy LinkedIn DM"}
-                                            </Button>
-                                        </AccordionContent>
-                                    </AccordionItem>
-
-                                    <AccordionItem value="recruiter-email" className="border-none bg-white/10 rounded-xl px-4 overflow-hidden">
-                                        <AccordionTrigger className="hover:no-underline py-4 text-white hover:text-indigo-100 transition-colors">
-                                            <div className="flex items-center gap-3">
-                                                <Mail className="w-4 h-4" />
-                                                <span className="text-sm font-semibold">Recruiter Email</span>
-                                            </div>
-                                        </AccordionTrigger>
-                                        <AccordionContent className="pb-4">
-                                            <div className="bg-white/90 rounded-lg p-3 text-gray-900 text-xs font-mono mb-3 max-h-40 overflow-y-auto leading-relaxed">
-                                                {kit.recruiterEmail}
-                                            </div>
-                                            <Button
-                                                size="sm"
-                                                variant="secondary"
-                                                className="w-full h-9 gap-2 font-bold"
-                                                onClick={() => copyToClipboard(kit.recruiterEmail, "em")}
-                                            >
-                                                {copiedKey === "em" ? <Check className="w-4 h-4 text-green-600" /> : <Copy className="w-4 h-4" />}
-                                                {copiedKey === "em" ? "Copied!" : "Copy Email Template"}
-                                            </Button>
-                                        </AccordionContent>
-                                    </AccordionItem>
-                                </Accordion>
-                            ) : null}
+                                <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-500 font-bold">
+                                    <MapPin className="w-4 h-4 text-indigo-500 dark:text-indigo-400" />
+                                    {job.location}
+                                </div>
+                                <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-500 font-bold">
+                                    <Calendar className="w-4 h-4 text-indigo-500 dark:text-indigo-400" />
+                                    {new Date(job.postedDate).toLocaleDateString()}
+                                </div>
+                            </div>
                         </div>
                     </div>
 
-                    <div>
-                        <h3 className="text-lg font-semibold mb-3">Job Description</h3>
-                        <div className="prose prose-sm max-w-none text-gray-600 leading-relaxed whitespace-pre-wrap">
-                            {job.description}
+                    {/* Scrollable Content */}
+                    <div className="flex-1 overflow-y-auto p-8 space-y-10 custom-scrollbar">
+                        {/* Outreach Kit Section */}
+                        <div className="space-y-4">
+                            <div className="flex items-center justify-between">
+                                <h3 className="text-[10px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.2em]">Neural Outreach Vectors</h3>
+                                <div className="h-0.5 flex-1 bg-gray-100 dark:bg-white/5 mx-4" />
+                                <Sparkles className="w-4 h-4 text-cyan-600 dark:text-cyan-500" />
+                            </div>
+
+                            <div className="bg-gradient-to-br from-gray-50 to-transparent dark:from-white/5 dark:to-transparent border border-gray-100 dark:border-white/10 rounded-[2.5rem] p-6 relative overflow-hidden group hover:border-cyan-500/30 transition-all duration-500 shadow-sm dark:shadow-none">
+                                <div className="absolute top-0 right-0 w-32 h-32 bg-cyan-500/5 blur-[50px] opacity-0 group-hover:opacity-100 transition-opacity" />
+
+                                {isGenerating ? (
+                                    <div className="flex flex-col items-center justify-center py-10 space-y-4">
+                                        <div className="w-10 h-10 border-2 border-cyan-500/20 border-t-cyan-500 rounded-full animate-spin" />
+                                        <p className="text-[10px] font-black text-cyan-600 dark:text-cyan-400 uppercase tracking-widest animate-pulse">Initializing Synthesis...</p>
+                                    </div>
+                                ) : kit ? (
+                                    <Accordion type="single" collapsible className="w-full space-y-4">
+                                        <AccordionItem value="cl" className="border-none bg-gray-100/50 dark:bg-white/5 rounded-2xl px-6 hover:bg-gray-100 dark:hover:bg-white/[0.07] transition-all">
+                                            <AccordionTrigger className="hover:no-underline py-5 text-[10px] font-black uppercase tracking-widest text-gray-500 dark:text-gray-400 group/item hover:text-gray-900 dark:hover:text-white">
+                                                <div className="flex items-center gap-4">
+                                                    <FileText className="w-4 h-4 text-indigo-500 dark:text-indigo-400 group-item-hover:text-cyan-500 dark:group-item-hover:text-cyan-400 transition-colors" />
+                                                    PRO-RESUME COVER
+                                                </div>
+                                            </AccordionTrigger>
+                                            <AccordionContent className="pb-6">
+                                                <div className="bg-white dark:bg-black/40 rounded-xl p-4 text-gray-600 dark:text-gray-400 text-[11px] font-mono mb-4 border border-gray-100 dark:border-white/5 max-h-48 overflow-y-auto leading-relaxed custom-scrollbar shadow-inner">
+                                                    {kit.coverLetter}
+                                                </div>
+                                                <Button size="sm" className="w-full h-11 bg-gray-900 dark:bg-white/5 hover:bg-cyan-600 dark:hover:bg-cyan-500 text-white font-black uppercase tracking-widest text-[9px] rounded-xl shadow-sm transition-all" onClick={() => copyToClipboard(kit.coverLetter, "cl")}>
+                                                    {copiedKey === "cl" ? <Check className="w-4 h-4 mr-2" /> : <Copy className="w-4 h-4 mr-2" />}
+                                                    {copiedKey === "cl" ? "BUFFERED" : "Copy to Buffer"}
+                                                </Button>
+                                            </AccordionContent>
+                                        </AccordionItem>
+                                        <AccordionItem value="li" className="border-none bg-gray-100/50 dark:bg-white/5 rounded-2xl px-6 hover:bg-gray-100 dark:hover:bg-white/[0.07] transition-all">
+                                            <AccordionTrigger className="hover:no-underline py-5 text-[10px] font-black uppercase tracking-widest text-gray-500 dark:text-gray-400 group/item hover:text-gray-900 dark:hover:text-white">
+                                                <div className="flex items-center gap-4">
+                                                    <Linkedin className="w-4 h-4 text-indigo-500 dark:text-indigo-400 group-item-hover:text-cyan-500 dark:group-item-hover:text-cyan-400 transition-colors" />
+                                                    Direct Message Vector
+                                                </div>
+                                            </AccordionTrigger>
+                                            <AccordionContent className="pb-6">
+                                                <div className="bg-white dark:bg-black/40 rounded-xl p-4 text-gray-600 dark:text-gray-400 text-[11px] font-mono mb-4 border border-gray-100 dark:border-white/5 leading-relaxed shadow-inner">
+                                                    {kit.linkedinDM}
+                                                </div>
+                                                <Button size="sm" className="w-full h-11 bg-gray-900 dark:bg-white/5 hover:bg-cyan-600 dark:hover:bg-cyan-500 text-white font-black uppercase tracking-widest text-[9px] rounded-xl shadow-sm transition-all" onClick={() => copyToClipboard(kit.linkedinDM, "li")}>
+                                                    {copiedKey === "li" ? <Check className="w-4 h-4 mr-2" /> : <Copy className="w-4 h-4 mr-2" />}
+                                                    {copiedKey === "li" ? "BUFFERED" : "Copy to Buffer"}
+                                                </Button>
+                                            </AccordionContent>
+                                        </AccordionItem>
+                                    </Accordion>
+                                ) : null}
+                            </div>
+                        </div>
+
+                        {/* Description Section */}
+                        <div className="space-y-4">
+                            <div className="flex items-center justify-between">
+                                <h3 className="text-[10px] font-black text-gray-400 dark:text-gray-500 uppercase tracking-[0.2em]">Operational parameters</h3>
+                                <div className="h-0.5 flex-1 bg-gray-100 dark:bg-white/5 mx-4" />
+                            </div>
+                            <div className="prose dark:prose-invert prose-sm max-w-none text-gray-600 dark:text-gray-400 font-medium leading-relaxed bg-gray-50 dark:bg-white/2 p-8 rounded-[2rem] border border-gray-100 dark:border-white/5 italic shadow-inner transition-colors duration-500">
+                                {job.description}
+                            </div>
+                        </div>
+
+                        {/* Quick Info Grid */}
+                        <div className="grid grid-cols-2 gap-4">
+                            <div className="p-6 bg-gray-50 dark:bg-white/5 rounded-2xl border border-gray-100 dark:border-white/5 group hover:border-indigo-500/30 transition-all shadow-sm dark:shadow-none">
+                                <p className="text-[10px] font-black text-gray-400 dark:text-gray-600 uppercase tracking-widest mb-1">Entity Logic</p>
+                                <p className="text-sm font-black text-gray-900 dark:text-white uppercase tracking-tight">{job.companyType}</p>
+                            </div>
+                            <div className="p-6 bg-gray-50 dark:bg-white/5 rounded-2xl border border-gray-100 dark:border-white/5 group hover:border-cyan-500/30 transition-all shadow-sm dark:shadow-none">
+                                <p className="text-[10px] font-black text-gray-400 dark:text-gray-600 uppercase tracking-widest mb-1">Network Access</p>
+                                <p className="text-sm font-black text-gray-900 dark:text-white uppercase tracking-tight">{job.remote ? "SATELLITE/REMOTE" : "CORE/ON-SITE"}</p>
+                            </div>
                         </div>
                     </div>
 
-                    <div className="bg-gray-50 p-4 rounded-xl space-y-3">
-                        <h4 className="font-semibold text-sm">Quick Info</h4>
-                        <div className="grid grid-cols-2 gap-4 text-sm">
-                            <div>
-                                <p className="text-gray-500">Experience</p>
-                                <p className="font-medium">Mid-Senior Level</p>
-                            </div>
-                            <div>
-                                <p className="text-gray-500">Work Setup</p>
-                                <p className="font-medium">{job.remote ? "Remote" : "On-site"}</p>
-                            </div>
-                        </div>
+                    {/* Footer Actions */}
+                    <div className="p-8 bg-white/80 dark:bg-[#0E121B]/80 backdrop-blur-xl border-t border-gray-100 dark:border-white/5 grid grid-cols-2 gap-4">
+                        <Button
+                            variant="ghost"
+                            className={`h-14 rounded-2xl font-black uppercase tracking-widest text-[10px] transition-all border ${isSaved ? "text-cyan-600 dark:text-cyan-400 border-cyan-500/30 bg-cyan-500/10" : "text-gray-400 dark:text-gray-400 border-gray-200 dark:border-white/10 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-white/5"}`}
+                            onClick={handleSaveToTracker}
+                            disabled={isSaved}
+                        >
+                            {isSaved ? <BookmarkCheck className="w-5 h-5 mr-3" /> : <Bookmark className="w-5 h-5 mr-3" />}
+                            {isSaved ? "Vaulted" : "Vault Pulse"}
+                        </Button>
+                        <Button
+                            className="h-14 bg-gradient-to-r from-cyan-600 to-indigo-600 dark:from-cyan-500 dark:to-indigo-600 hover:scale-[1.02] active:scale-95 transition-all text-white font-black uppercase tracking-widest text-[10px] rounded-2xl shadow-[0_0_20px_rgba(6,182,212,0.2)] dark:shadow-[0_0_20px_rgba(6,182,212,0.3)]"
+                            onClick={() => {
+                                if (!checkLimit("autoApply")) {
+                                    setShowUpgradeModal(true);
+                                    return;
+                                }
+                                alert("Auto-Apply Assistant triggered!");
+                            }}
+                        >
+                            <Zap className="w-4 h-4 mr-3" />
+                            Auto Deploy
+                        </Button>
+                        <Button variant="ghost" className="col-span-2 h-12 text-gray-400 dark:text-gray-500 hover:text-gray-900 dark:hover:text-white font-black uppercase tracking-widest text-[9px] border border-gray-100 dark:border-white/5 rounded-xl mt-2 transition-all" asChild>
+                            <a href={job.applyLink} target="_blank" rel="noopener noreferrer">
+                                External Uplink: {job.source} <ExternalLink className="w-3 h-3 ml-2" />
+                            </a>
+                        </Button>
                     </div>
                 </div>
-
-                <SheetFooter className="mt-8 flex gap-3 sm:flex-row flex-col">
-                    <Button
-                        variant="outline"
-                        className={`flex-1 gap-2 ${isSaved ? "text-green-600 border-green-200 bg-green-50" : ""}`}
-                        onClick={handleSaveToTracker}
-                        disabled={isSaved}
-                    >
-                        {isSaved ? <BookmarkCheck className="w-4 h-4" /> : <Bookmark className="w-4 h-4" />}
-                        {isSaved ? "Saved to Tracker" : "Save to Tracker"}
-                    </Button>
-                    <Button
-                        className="flex-1 bg-indigo-600 hover:bg-indigo-700 text-white gap-2 font-bold shadow-lg shadow-indigo-200"
-                        onClick={() => {
-                            if (!checkLimit("autoApply")) {
-                                setShowUpgradeModal(true);
-                                return;
-                            }
-                            window.postMessage({
-                                type: 'KAREERAI_FILL_FORM',
-                                platform: job?.source || 'Other',
-                                profile: { fullName: "John Doe", email: "john.doe@example.com" }
-                            }, '*');
-                            alert("Auto-Apply Assistant triggered! Please ensure the extension is installed.");
-                        }}
-                    >
-                        <Zap className="w-4 h-4" />
-                        Auto Apply
-                    </Button>
-                    <Button variant="outline" className="flex-1" asChild>
-                        <a href={`https://www.google.com/search?q=${job.companyName}`} target="_blank" rel="noopener noreferrer">
-                            <Globe className="w-4 h-4 mr-2" />
-                            Company Website
-                        </a>
-                    </Button>
-                    <Button className="flex-1 bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white shadow-md transition-all active:scale-95" asChild>
-                        <a href={job.applyLink} target="_blank" rel="noopener noreferrer">
-                            <ExternalLink className="w-4 h-4 mr-2" />
-                            Apply on {job.source}
-                        </a>
-                    </Button>
-                </SheetFooter>
 
                 <UpgradeModal
                     isOpen={showUpgradeModal}

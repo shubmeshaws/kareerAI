@@ -42,18 +42,18 @@ export default function AutoApplyPage() {
         <div className="space-y-8 pb-12">
             <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
                 <div>
-                    <h1 className="text-3xl font-bold text-gray-900 flex items-center gap-3">
-                        <span className="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-600 to-purple-600 flex items-center justify-center">
+                    <h1 className="text-3xl font-black text-gray-900 dark:text-white tracking-tight flex items-center gap-3 uppercase">
+                        <span className="w-12 h-12 rounded-2xl bg-gradient-to-br from-indigo-600 to-purple-600 dark:from-indigo-500 dark:to-purple-600 flex items-center justify-center shadow-[0_0_20px_rgba(147,51,234,0.2)] dark:shadow-[0_0_20px_rgba(147,51,234,0.3)]">
                             <Zap className="w-6 h-6 text-white" />
                         </span>
                         Auto Apply Assistant
                     </h1>
-                    <p className="text-gray-500 mt-1">
+                    <p className="text-gray-500 dark:text-gray-400 mt-2 font-medium">
                         Automate boring job application forms on Lever and Greenhouse.
                     </p>
                 </div>
 
-                <Button variant="outline" className="gap-2 font-bold">
+                <Button variant="outline" className="gap-3 font-black uppercase tracking-widest text-[10px] h-12 rounded-xl border-gray-200 dark:border-white/10 hover:bg-gray-50 dark:hover:bg-white/5 transition-all text-gray-600 dark:text-gray-300">
                     <Settings className="w-4 h-4" />
                     Mapping Settings
                 </Button>
@@ -63,31 +63,31 @@ export default function AutoApplyPage() {
 
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
                 <div className="lg:col-span-1 space-y-6">
-                    <Card className="p-6 rounded-3xl border-gray-100 shadow-sm overflow-hidden">
-                        <h3 className="text-lg font-bold flex items-center gap-2 mb-6">
-                            <UserCircle className="w-5 h-5 text-indigo-600" />
+                    <Card className="p-6 bg-white/40 dark:bg-white/5 border-gray-200 dark:border-white/10 rounded-[2rem] backdrop-blur-md shadow-sm dark:shadow-none overflow-hidden transition-all duration-500">
+                        <h3 className="text-lg font-black text-gray-900 dark:text-white flex items-center gap-3 mb-6 uppercase tracking-tight">
+                            <UserCircle className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
                             Source Profile
                         </h3>
 
                         {profile && (
                             <div className="space-y-4">
-                                <div className="pb-4 border-b border-gray-50">
-                                    <p className="text-[10px] uppercase font-bold text-gray-400 tracking-wider">Full Name</p>
-                                    <p className="font-medium text-gray-900 text-sm">{profile.fullName}</p>
+                                <div className="pb-4 border-b border-gray-100 dark:border-white/5">
+                                    <p className="text-[10px] uppercase font-black text-gray-400 dark:text-gray-500 tracking-widest mb-1">Full Name</p>
+                                    <p className="font-bold text-gray-900 dark:text-gray-200 text-sm tracking-tight">{profile.fullName}</p>
                                 </div>
-                                <div className="pb-4 border-b border-gray-50">
-                                    <p className="text-[10px] uppercase font-bold text-gray-400 tracking-wider">Email Address</p>
-                                    <p className="font-medium text-gray-900 text-sm">{profile.email}</p>
+                                <div className="pb-4 border-b border-gray-100 dark:border-white/5">
+                                    <p className="text-[10px] uppercase font-black text-gray-400 dark:text-gray-500 tracking-widest mb-1">Email Address</p>
+                                    <p className="font-bold text-gray-900 dark:text-gray-200 text-sm tracking-tight">{profile.email}</p>
                                 </div>
-                                <div className="pb-4 border-b border-gray-50">
-                                    <p className="text-[10px] uppercase font-bold text-gray-400 tracking-wider">Location</p>
-                                    <p className="font-medium text-gray-900 text-sm">{profile.location}</p>
+                                <div className="pb-4 border-b border-gray-100 dark:border-white/5">
+                                    <p className="text-[10px] uppercase font-black text-gray-400 dark:text-gray-500 tracking-widest mb-1">Location</p>
+                                    <p className="font-bold text-gray-900 dark:text-gray-200 text-sm tracking-tight">{profile.location}</p>
                                 </div>
-                                <div className="pb-4 border-b border-gray-50">
-                                    <p className="text-[10px] uppercase font-bold text-gray-400 tracking-wider">LinkedIn URL</p>
-                                    <p className="font-medium text-indigo-600 text-sm truncate">{profile.linkedinUrl}</p>
+                                <div className="pb-4 border-b border-gray-100 dark:border-white/5">
+                                    <p className="text-[10px] uppercase font-black text-gray-400 dark:text-gray-500 tracking-widest mb-1">LinkedIn URL</p>
+                                    <p className="font-bold text-indigo-600 dark:text-indigo-400 text-sm truncate tracking-tight">{profile.linkedinUrl}</p>
                                 </div>
-                                <Button variant="secondary" className="w-full text-xs font-bold py-5 bg-gray-50 hover:bg-gray-100">
+                                <Button className="w-full h-12 bg-gray-100 dark:bg-white/5 hover:bg-gray-200 dark:hover:bg-white/10 text-gray-600 dark:text-gray-300 font-black uppercase tracking-widest text-[10px] rounded-xl transition-all">
                                     Edit Auto-Fill Profile
                                 </Button>
                             </div>
@@ -96,13 +96,13 @@ export default function AutoApplyPage() {
                 </div>
 
                 <div className="lg:col-span-2 space-y-6">
-                    <Card className="rounded-3xl border-gray-100 shadow-sm overflow-hidden">
-                        <div className="p-6 border-b border-gray-50 flex items-center justify-between">
-                            <h3 className="text-lg font-bold flex items-center gap-2">
-                                <History className="w-5 h-5 text-purple-600" />
+                    <Card className="bg-white/40 dark:bg-white/5 border-gray-200 dark:border-white/10 rounded-[2rem] backdrop-blur-md shadow-sm dark:shadow-none overflow-hidden transition-all duration-500">
+                        <div className="p-6 border-b border-gray-100 dark:border-white/5 flex items-center justify-between">
+                            <h3 className="text-lg font-black text-gray-900 dark:text-white flex items-center gap-3 uppercase tracking-tight">
+                                <History className="w-5 h-5 text-purple-600 dark:text-purple-400" />
                                 Application Log
                             </h3>
-                            <Badge variant="secondary" className="bg-purple-50 text-purple-700">
+                            <Badge variant="secondary" className="bg-purple-100 dark:bg-purple-500/10 text-purple-700 dark:text-purple-400 border border-purple-200 dark:border-purple-500/20 text-[10px] font-black px-3 py-1 uppercase tracking-wider">
                                 Last 50 attempts
                             </Badge>
                         </div>
@@ -110,57 +110,62 @@ export default function AutoApplyPage() {
                         <div className="overflow-x-auto">
                             {logs.length > 0 ? (
                                 <Table>
-                                    <TableHeader className="bg-gray-50/50">
-                                        <TableRow className="hover:bg-transparent border-gray-100">
-                                            <TableHead className="text-[10px] uppercase font-bold text-gray-400 h-10 px-6">Source</TableHead>
-                                            <TableHead className="text-[10px] uppercase font-bold text-gray-400 h-10">Platform</TableHead>
-                                            <TableHead className="text-[10px] uppercase font-bold text-gray-400 h-10">Status</TableHead>
-                                            <TableHead className="text-[10px] uppercase font-bold text-gray-400 h-10">Time</TableHead>
+                                    <TableHeader className="bg-gray-50/50 dark:bg-white/[0.02]">
+                                        <TableRow className="hover:bg-transparent border-gray-100 dark:border-white/5">
+                                            <TableHead className="text-[10px] uppercase font-black text-gray-400 dark:text-gray-500 h-10 px-6 tracking-widest">Source</TableHead>
+                                            <TableHead className="text-[10px] uppercase font-black text-gray-400 dark:text-gray-500 h-10 tracking-widest">Platform</TableHead>
+                                            <TableHead className="text-[10px] uppercase font-black text-gray-400 dark:text-gray-500 h-10 tracking-widest">Status</TableHead>
+                                            <TableHead className="text-[10px] uppercase font-black text-gray-400 dark:text-gray-500 h-10 tracking-widest">Time</TableHead>
                                         </TableRow>
                                     </TableHeader>
                                     <TableBody>
                                         {logs.map((log) => (
-                                            <TableRow key={log.id} className="border-gray-50 hover:bg-gray-50/50 transition-colors">
-                                                <TableCell className="py-4 px-6">
+                                            <TableRow key={log.id} className="border-gray-100 dark:border-white/5 hover:bg-gray-50/50 dark:hover:bg-white/[0.02] transition-colors">
+                                                <TableCell className="py-5 px-6">
                                                     <div className="flex flex-col">
-                                                        <span className="font-bold text-gray-900">{log.companyName}</span>
-                                                        <span className="text-xs text-gray-500">{log.role}</span>
+                                                        <span className="font-bold text-gray-900 dark:text-gray-100 tracking-tight">{log.companyName}</span>
+                                                        <span className="text-[10px] text-gray-500 dark:text-gray-400 font-bold uppercase tracking-wider mt-0.5">{log.role}</span>
                                                     </div>
                                                 </TableCell>
-                                                <TableCell className="py-4">
-                                                    <Badge variant="outline" className="text-[10px] font-medium border-gray-200">
+                                                <TableCell className="py-5 text-xs text-gray-600 dark:text-gray-400 font-medium">
+                                                    <Badge variant="outline" className="text-[10px] font-black border-gray-200 dark:border-white/10 text-gray-500 dark:text-gray-400 uppercase tracking-widest px-2 py-0.5">
                                                         {log.platform}
                                                     </Badge>
                                                 </TableCell>
-                                                <TableCell className="py-4">
+                                                <TableCell className="py-5">
                                                     {log.status === "Success" ? (
-                                                        <span className="flex items-center gap-1.5 text-green-600 text-xs font-bold">
+                                                        <span className="flex items-center gap-1.5 text-emerald-600 dark:text-emerald-400 text-[10px] font-black uppercase tracking-wider">
                                                             <CheckCircle2 className="w-3.5 h-3.5" />
                                                             Success
                                                         </span>
                                                     ) : (
-                                                        <span className="flex items-center gap-1.5 text-red-600 text-xs font-bold">
+                                                        <span className="flex items-center gap-1.5 text-red-600 dark:text-red-400 text-[10px] font-black uppercase tracking-wider">
                                                             <XCircle className="w-3.5 h-3.5" />
                                                             Error
                                                         </span>
                                                     )}
                                                 </TableCell>
-                                                <TableCell className="py-4 text-xs text-gray-400 flex items-center gap-1.5">
-                                                    <Clock className="w-3 h-3" />
-                                                    {new Date(log.timestamp).toLocaleDateString()}
+                                                <TableCell className="py-5">
+                                                    <div className="flex items-center gap-1.5 text-[10px] text-gray-400 dark:text-gray-500 font-black uppercase tracking-widest">
+                                                        <Clock className="w-3 h-3" />
+                                                        {new Date(log.timestamp).toLocaleDateString()}
+                                                    </div>
                                                 </TableCell>
                                             </TableRow>
                                         ))}
                                     </TableBody>
                                 </Table>
                             ) : (
-                                <div className="p-12 text-center space-y-3">
-                                    <div className="w-12 h-12 bg-gray-50 rounded-full flex items-center justify-center mx-auto">
-                                        <History className="w-6 h-6 text-gray-300" />
+                                <div className="p-16 text-center space-y-4">
+                                    <div className="w-16 h-16 bg-gray-50 dark:bg-white/5 rounded-2xl flex items-center justify-center mx-auto border border-gray-100 dark:border-white/10">
+                                        <History className="w-8 h-8 text-gray-300 dark:text-gray-600" />
                                     </div>
-                                    <p className="text-gray-500 text-sm">No automated applications yet. Start by finding a job!</p>
-                                    <Button variant="link" className="text-indigo-600 font-bold p-0">
-                                        Go to Job Finder <ExternalLink className="w-3 h-3 ml-1" />
+                                    <div className="max-w-xs mx-auto">
+                                        <p className="text-gray-900 dark:text-gray-300 font-bold tracking-tight">No automated applications yet</p>
+                                        <p className="text-gray-500 dark:text-gray-500 text-xs mt-1">Deploy the assistant to start tracking your mission logs here.</p>
+                                    </div>
+                                    <Button variant="link" className="text-indigo-600 dark:text-indigo-400 font-black uppercase tracking-widest text-[10px] group">
+                                        Go to Job Finder <ExternalLink className="w-3.5 h-3.5 ml-2 group-hover:translate-x-1 transition-transform" />
                                     </Button>
                                 </div>
                             )}

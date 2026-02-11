@@ -108,49 +108,51 @@ export default function ResumesPage() {
     const canGenerate = selectedFile && jobDescription.trim().length > 50 && jobTitle.trim().length > 0;
 
     return (
-        <div className="space-y-6">
+        <div className="space-y-8 max-w-7xl mx-auto">
             {/* Header */}
-            <div className="flex items-center justify-between">
+            <div className="flex flex-col md:flex-row md:items-end justify-between gap-6">
                 <div>
-                    <h1 className="text-2xl font-bold text-gray-900 flex items-center gap-2">
-                        <Sparkles className="w-6 h-6 text-indigo-600" />
-                        Resume Tailor
+                    <h1 className="text-3xl md:text-4xl font-black text-gray-900 dark:text-white tracking-tight flex items-center gap-4">
+                        <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-cyan-600 to-indigo-600 dark:from-cyan-500 dark:to-indigo-600 flex items-center justify-center shadow-[0_0_20px_rgba(6,182,212,0.2)] dark:shadow-[0_0_20px_rgba(6,182,212,0.3)]">
+                            <Sparkles className="w-6 h-6 text-white" />
+                        </div>
+                        NEURAL RESUME TAILOR
                     </h1>
-                    <p className="text-gray-600 mt-1">
-                        Create ATS-optimized resumes tailored to specific job descriptions
+                    <p className="text-gray-500 dark:text-gray-400 mt-2 font-medium">
+                        Synthesizing ATS-optimized resumes through high-dimensional data mapping.
                     </p>
                 </div>
             </div>
 
             {/* Tabs */}
-            <Tabs value={activeTab} onValueChange={setActiveTab}>
-                <TabsList>
-                    <TabsTrigger value="create">Create New</TabsTrigger>
-                    <TabsTrigger value="saved">Saved Resumes</TabsTrigger>
+            <Tabs value={activeTab} onValueChange={setActiveTab} className="mt-8">
+                <TabsList className="inline-flex h-14 items-center justify-center rounded-[1.25rem] bg-gray-100 dark:bg-white/5 p-1 border border-gray-100 dark:border-white/5 shadow-inner">
+                    <TabsTrigger value="create" className="rounded-xl px-8 h-full font-black uppercase tracking-widest text-[10px] data-[state=active]:bg-white dark:data-[state=active]:bg-white/10 data-[state=active]:text-cyan-600 dark:data-[state=active]:text-cyan-400 data-[state=active]:shadow-sm transition-all">Create New</TabsTrigger>
+                    <TabsTrigger value="saved" className="rounded-xl px-8 h-full font-black uppercase tracking-widest text-[10px] data-[state=active]:bg-white dark:data-[state=active]:bg-white/10 data-[state=active]:text-indigo-600 dark:data-[state=active]:text-indigo-400 data-[state=active]:shadow-sm transition-all">Vaulted Resumes</TabsTrigger>
                 </TabsList>
 
-                <TabsContent value="create" className="space-y-6">
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                <TabsContent value="create" className="space-y-8 mt-8 focus-visible:outline-none">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
                         {/* Left Column - Inputs */}
-                        <div className="space-y-6">
+                        <div className="space-y-8">
                             {/* Job Title */}
-                            <Card className="p-4">
-                                <Label htmlFor="job-title" className="text-sm font-medium text-gray-700">
-                                    Job Title
+                            <Card className="p-6 bg-white/40 dark:bg-white/5 border-gray-200 dark:border-white/5 rounded-[2.5rem] backdrop-blur-sm group shadow-sm dark:shadow-none">
+                                <Label htmlFor="job-title" className="text-[10px] font-black uppercase tracking-widest text-gray-400 dark:text-gray-500 group-focus-within:text-cyan-600 dark:group-focus-within:text-cyan-400 transition-colors ml-1">
+                                    Target Position
                                 </Label>
                                 <Input
                                     id="job-title"
-                                    placeholder="e.g., Senior Software Engineer"
+                                    placeholder="e.g., Senior Systems Architect"
                                     value={jobTitle}
                                     onChange={(e) => setJobTitle(e.target.value)}
-                                    className="mt-2"
+                                    className="mt-3 h-14 bg-gray-50/50 dark:bg-white/5 border-gray-100 dark:border-white/10 text-gray-900 dark:text-white placeholder:text-gray-400 dark:placeholder:text-gray-600 rounded-2xl focus:ring-cyan-500/50 focus:border-cyan-500/50 transition-all font-black text-lg px-6"
                                 />
                             </Card>
 
                             {/* File Upload */}
-                            <div>
-                                <Label className="text-sm font-medium text-gray-700 mb-2 block">
-                                    Base Resume
+                            <div className="space-y-3">
+                                <Label className="text-[10px] font-black uppercase tracking-widest text-gray-500 ml-1">
+                                    Source Artifact (Base Resume)
                                 </Label>
                                 <FileUpload
                                     onFileSelect={handleFileSelect}
@@ -172,32 +174,32 @@ export default function ResumesPage() {
                                 size="lg"
                                 disabled={!canGenerate || isGenerating}
                                 onClick={handleGenerate}
-                                className="w-full bg-gradient-to-r from-indigo-600 to-purple-600 hover:from-indigo-700 hover:to-purple-700 text-white py-6 text-lg"
+                                className="w-full bg-gradient-to-r from-cyan-500 to-indigo-600 hover:from-cyan-400 hover:to-indigo-500 text-white h-20 text-lg font-black uppercase tracking-widest rounded-2xl shadow-[0_0_30px_rgba(6,182,212,0.3)] transition-all transform hover:scale-[1.01] active:scale-95 disabled:grayscale disabled:opacity-50"
                             >
                                 {isGenerating ? (
                                     <>
-                                        <Loader2 className="w-5 h-5 mr-2 animate-spin" />
-                                        Generating ATS Resume...
+                                        <Loader2 className="w-6 h-6 mr-3 animate-spin" />
+                                        COMMENCING SYNTHESIS...
                                     </>
                                 ) : (
                                     <>
-                                        <Wand2 className="w-5 h-5 mr-2" />
-                                        Generate ATS Resume
+                                        <Wand2 className="w-6 h-6 mr-3" />
+                                        GENERATE NEURAL RESUME
                                     </>
                                 )}
                             </Button>
 
                             {!canGenerate && selectedFile && (
-                                <p className="text-sm text-amber-600 text-center">
-                                    Please enter a job title and paste a job description (min 50 characters)
+                                <p className="text-[10px] text-amber-500/80 text-center font-black uppercase tracking-widest animate-pulse">
+                                    Input target position and description (50+ tokens) to proceed
                                 </p>
                             )}
                         </div>
 
                         {/* Right Column - Results */}
-                        <div className="space-y-6">
+                        <div className="space-y-8">
                             {keywordAnalysis ? (
-                                <>
+                                <div className="space-y-8 animate-in fade-in slide-in-from-right-4 duration-700">
                                     <KeywordScore analysis={keywordAnalysis} />
                                     {optimizedResume && (
                                         <ResumePreview
@@ -207,17 +209,20 @@ export default function ResumesPage() {
                                             isSaving={isSaving}
                                         />
                                     )}
-                                </>
+                                </div>
                             ) : (
-                                <Card className="p-12 text-center border-dashed">
-                                    <div className="w-20 h-20 rounded-full bg-gradient-to-r from-indigo-100 to-purple-100 flex items-center justify-center mx-auto mb-4">
-                                        <Wand2 className="w-10 h-10 text-indigo-600" />
+                                <Card className="p-16 text-center bg-white/40 dark:bg-white/5 border-gray-200 dark:border-white/5 border-dashed rounded-[3rem] backdrop-blur-sm group hover:border-cyan-500/20 dark:hover:border-white/10 transition-colors shadow-sm dark:shadow-none">
+                                    <div className="relative mx-auto mb-8 w-24 h-24">
+                                        <div className="absolute inset-0 bg-cyan-500/10 blur-[40px] opacity-0 group-hover:opacity-100 transition-opacity" />
+                                        <div className="w-24 h-24 rounded-full bg-gradient-to-br from-cyan-600 to-indigo-600 flex items-center justify-center relative shadow-xl">
+                                            <Wand2 className="w-10 h-10 text-white" />
+                                        </div>
                                     </div>
-                                    <h3 className="text-lg font-medium text-gray-900 mb-2">
-                                        Ready to optimize your resume
+                                    <h3 className="text-2xl font-black text-gray-900 dark:text-white mb-4 uppercase tracking-tight">
+                                        Ready for Optimization
                                     </h3>
-                                    <p className="text-sm text-gray-500 max-w-sm mx-auto">
-                                        Upload your resume, paste a job description, and click Generate to see your ATS-optimized resume with keyword matching
+                                    <p className="text-gray-500 dark:text-gray-500 max-w-sm mx-auto font-medium leading-relaxed">
+                                        Deploy your source artifacts to initialize the neural optimization engine.
                                     </p>
                                 </Card>
                             )}
@@ -225,7 +230,7 @@ export default function ResumesPage() {
                     </div>
                 </TabsContent>
 
-                <TabsContent value="saved">
+                <TabsContent value="saved" className="mt-8 focus-visible:outline-none">
                     <SavedResumes onRefresh={savedRefresh} />
                 </TabsContent>
             </Tabs>
